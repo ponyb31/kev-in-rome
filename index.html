@@ -20,8 +20,8 @@
             top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1;
             background: 
-                radial-gradient(at 0% 0%, rgba(255, 69, 0, 0.1) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(255, 140, 0, 0.05) 0px, transparent 50%);
+                radial-gradient(at 0% 0%, rgba(34, 197, 94, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(245, 158, 11, 0.05) 0px, transparent 50%);
         }
 
         .glass {
@@ -38,16 +38,16 @@
             text-transform: uppercase;
         }
 
-        @keyframes pulse-orange {
+        @keyframes pulse-green {
             0%, 100% { opacity: 1; transform: scale(1); }
             50% { opacity: 0.4; transform: scale(1.2); }
         }
         .status-dot {
             width: 8px; height: 8px;
-            background-color: #ff4500;
+            background-color: #22c55e;
             border-radius: 50%;
             display: inline-block;
-            animation: pulse-orange 2s infinite;
+            animation: pulse-green 2s infinite;
         }
     </style>
 </head>
@@ -67,7 +67,9 @@
         
         <header class="mt-10 mb-16">
             <h1 class="header-title">
-                KEV IN <span class="text-orange-600">ROME</span>
+                <span class="text-green-500">KEV</span> 
+                <span class="text-white">IN</span> 
+                <span class="text-amber-500">ROME</span>
             </h1>
             <p class="mt-6 max-w-2xl text-xl text-zinc-400 font-medium leading-relaxed">
                 Three nights of Roman conquest. Carnage awaits. 
@@ -88,7 +90,7 @@
                 <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Magnificent Minutes</span>
             </div>
             <div class="glass p-8 rounded-[2rem]">
-                <span id="secs" class="text-6xl font-black block mb-1 text-orange-600">00</span>
+                <span id="secs" class="text-6xl font-black block mb-1 text-amber-500">00</span>
                 <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Seconds til ROME TIME BABY</span>
             </div>
         </div>
@@ -106,33 +108,34 @@
             </div>
 
             <div class="lg:col-span-2 glass p-10 rounded-[2.5rem] flex flex-col justify-center">
-                <h3 class="text-xs font-black tracking-[0.3em] text-orange-600 mb-6 uppercase">The Tactical Playbook</h3>
+                <h3 class="text-xs font-black tracking-[0.3em] text-amber-500 mb-6 uppercase">The Tactical Playbook</h3>
                 <ul class="space-y-6">
                     <li class="group">
                         <span class="block text-zinc-500 text-[10px] uppercase font-bold mb-1">Phase 01</span>
-                        <p class="font-bold text-lg group-hover:text-orange-500 transition-colors">Get on the fucking flight</p>
+                        <p class="font-bold text-lg group-hover:text-green-500 transition-colors">Get on the fucking flight</p>
                     </li>
                     <li class="group">
                         <span class="block text-zinc-500 text-[10px] uppercase font-bold mb-1">Phase 02</span>
-                        <p class="font-bold text-lg group-hover:text-orange-500 transition-colors">ROME BABY</p>
+                        <p class="font-bold text-lg group-hover:text-green-500 transition-colors">ROME BABY</p>
                     </li>
                     <li class="group">
                         <span class="block text-zinc-500 text-[10px] uppercase font-bold mb-1">Phase 03</span>
-                        <p class="font-bold text-lg group-hover:text-orange-500 transition-colors">Drinking</p>
+                        <p class="font-bold text-lg group-hover:text-green-500 transition-colors">Drinking</p>
                     </li>
-					<li class="group">
+                    <li class="group">
                         <span class="block text-zinc-500 text-[10px] uppercase font-bold mb-1">Phase 04</span>
-                        <p class="font-bold text-lg group-hover:text-orange-500 transition-colors">The match</p>
+                        <p class="font-bold text-lg group-hover:text-green-500 transition-colors">The match</p>
                     </li>
-					<li class="group">
+                    <li class="group">
                         <span class="block text-zinc-500 text-[10px] uppercase font-bold mb-1">Phase 05</span>
-                        <p class="font-bold text-lg group-hover:text-orange-500 transition-colors">Return to civilization</p>
+                        <p class="font-bold text-lg group-hover:text-green-500 transition-colors">Return to civilization</p>
                     </li>
                 </ul>
             </div>
         </div>
-<section class="mt-32 text-center">
-            <h2 class="text-[10px] tracking-[0.5em] text-orange-600 font-black uppercase mb-4">Maximum Brutality</h2>
+
+        <section class="mt-32 text-center">
+            <h2 class="text-[10px] tracking-[0.5em] text-amber-500 font-black uppercase mb-4">Maximum Brutality</h2>
             <p class="header-title italic opacity-20">ARE YOU NOT ENTERTAINED?</p>
             <p class="text-zinc-500 mt-4 tracking-widest uppercase text-[12px] font-bold">What we do in Trastevere echoes in eternity</p>
         </section>
@@ -140,105 +143,101 @@
         <section class="mt-20">
             <div class="flex justify-between items-end mb-10 border-b border-white/10 pb-6">
                 <h2 class="text-4xl font-black tracking-tighter uppercase italic">The Roman Legion</h2>
-                <span class="text-orange-500 font-mono text-sm">[ 20 UNITS DEPLOYED ]</span>
+                <span class="text-amber-500 font-mono text-sm">[ 20 UNITS DEPLOYED ]</span>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
-                <div class="glass py-4 px-6 rounded-xl border-white/5 hover:border-orange-500/50 transition-colors group">
-                    <span class="text-[10px] text-zinc-600 block mb-1 group-hover:text-orange-600 transition-colors">Legatus Legionis</span>
+                <div class="glass py-4 px-6 rounded-xl border-white/5 hover:border-green-500/50 transition-colors group">
+                    <span class="text-[10px] text-zinc-600 block mb-1 group-hover:text-green-500 transition-colors">Legatus Legionis</span>
                     <p class="font-bold tracking-tight">KEV</p>
                 </div>
                 <div class="glass py-4 px-6 rounded-xl border-white/5">
                     <span class="text-[10px] text-zinc-600 block mb-1">Tribunus Laticlavius</span>
                     <p class="font-bold tracking-tight">Steve F</p>
                 </div>
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-				<span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-				<p class="font-bold tracking-tight">Steve B</p>
-			</div>
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Steve B</p>
-			</div>
-			
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Ro</p>
-			</div>		
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Dave</p>
-			</div>
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Tom</p>
-			</div>
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Fergal</p>
-			</div>
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Alan</p>
-			</div>
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Aiden</p>
-			</div>
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Ollie</p>
-			</div>
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Colm</p>
-			</div>
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Ed</p>
-			</div>
-			
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Phil</p>
-			</div>
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Adrian</p>
-			</div>
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Patty</p>
-			</div>
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Paul</p>
-			</div>
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Sean</p>
-			</div>
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Anthony</p>
-			</div>
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Brian</p>
-			</div>
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">JJ</p>
-			</div>
-			<div class="glass py-4 px-6 rounded-xl border-white/5">
-			    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-			    <p class="font-bold tracking-tight">Micheal</p>
-			</div>	
-        </section>		
-<section class="mt-32 grid lg:grid-cols-2 gap-8">
-            <div class="glass p-10 rounded-[2.5rem] border-orange-500/20">
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Steve B</p>
+                </div>
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Ro</p>
+                </div>      
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Dave</p>
+                </div>
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Tom</p>
+                </div>
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Fergal</p>
+                </div>
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Alan</p>
+                </div>
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Aiden</p>
+                </div>
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Ollie</p>
+                </div>
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Colm</p>
+                </div>
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Ed</p>
+                </div>
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Phil</p>
+                </div>
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Adrian</p>
+                </div>
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Patty</p>
+                </div>
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Paul</p>
+                </div>
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Sean</p>
+                </div>
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Anthony</p>
+                </div>
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Brian</p>
+                </div>
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">JJ</p>
+                </div>
+                <div class="glass py-4 px-6 rounded-xl border-white/5">
+                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
+                    <p class="font-bold tracking-tight">Micheal</p>
+                </div>  
+            </div>      
+        </section>      
+
+        <section class="mt-32 grid lg:grid-cols-2 gap-8">
+            <div class="glass p-10 rounded-[2.5rem] border-amber-500/20">
                 <div class="flex justify-between items-center mb-8">
-                    <h3 class="text-xs font-black tracking-[0.3em] text-orange-600 uppercase">Air Support (Aer Lingus)</h3>
+                    <h3 class="text-xs font-black tracking-[0.3em] text-amber-500 uppercase">Air Support (Aer Lingus)</h3>
                     <span class="status-dot"></span>
                 </div>
                 
@@ -246,7 +245,7 @@
                     <div class="flex justify-between items-start">
                         <div>
                             <p class="text-[10px] uppercase text-zinc-500 font-bold mb-1">Outbound / EI 0402</p>
-                            <p class="text-2xl font-black">DUB <span class="text-orange-600">→</span> FCO</p>
+                            <p class="text-2xl font-black">DUB <span class="text-amber-500">→</span> FCO</p>
                             <p class="text-sm text-zinc-400">Fri, 23 Jan | 06:50 — 10:55</p>
                         </div>
                         <div class="text-right">
@@ -260,7 +259,7 @@
                     <div class="flex justify-between items-start">
                         <div>
                             <p class="text-[10px] uppercase text-zinc-500 font-bold mb-1">Inbound / EI 0403</p>
-                            <p class="text-2xl font-black">FCO <span class="text-orange-600">→</span> DUB</p>
+                            <p class="text-2xl font-black">FCO <span class="text-amber-500">→</span> DUB</p>
                             <p class="text-sm text-zinc-400">Mon, 26 Jan | 11:35 — 13:50</p>
                         </div>
                         <div class="text-right">
@@ -275,13 +274,13 @@
                 <div class="absolute top-[-20px] right-[-20px] text-9xl font-black opacity-[0.03] pointer-events-none">ROME</div>
                 
                 <div>
-                    <h3 class="text-xs font-black tracking-[0.3em] text-orange-600 mb-8 uppercase">Imperial Base</h3>
+                    <h3 class="text-xs font-black tracking-[0.3em] text-amber-500 mb-8 uppercase">Imperial Base</h3>
                     <p class="text-4xl font-black mb-2 tracking-tighter">HOTEL QUIRINALE</p>
                     <p class="text-zinc-400 mb-6 font-medium italic">Via Nazionale, 7, 00184 Roma RM</p>
                 </div>
 
                 <div class="space-y-4">
-                    <a href="https://www.hotelquirinale.it/en/index" target="_blank" class="block w-full py-4 bg-white text-black text-center rounded-xl font-black uppercase text-xs tracking-widest hover:bg-orange-600 hover:text-white transition-all">
+                    <a href="https://www.hotelquirinale.it/en/index" target="_blank" class="block w-full py-4 bg-white text-black text-center rounded-xl font-black uppercase text-xs tracking-widest hover:bg-amber-600 hover:text-white transition-all">
                         View Base Map
                     </a>
                     <p class="text-[10px] text-center text-zinc-500 font-bold uppercase tracking-widest">Check-in: 23 Jan 2026</p>
@@ -291,7 +290,6 @@
     </main>
 
     <script>
-        // TARGET: Fri, 23 Jan 2026 6:40am
         const targetDate = new Date("Jan 23, 2026 06:40:00").getTime();
 
         function updateTimer() {
@@ -309,7 +307,7 @@
             document.getElementById("secs").innerText = s < 10 ? '0'+s : s;
 
             if (distance < 0) {
-                document.querySelector('main').innerHTML = "<h1 class='header-title text-center py-20'>GLORY ATTAINED.</h1>";
+                document.querySelector('main').innerHTML = "<h1 class='header-title text-center py-20'><span class='text-green-500'>GLORY</span> <span class='text-white'>ATTAINED</span>.</h1>";
             }
         }
 
@@ -318,15 +316,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
