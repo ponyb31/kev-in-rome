@@ -1,61 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Kev’s Rome Stag – No Survivors</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEV IN ROME 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        
+        body { 
+            background-color: #0a0a0a; 
+            font-family: 'Inter', sans-serif;
+            color: white;
+            overflow-x: hidden;
+        }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Impact, "Arial Black", sans-serif;
-      background: radial-gradient(circle at top, #2b0000, #000);
-      color: #fff;
-      text-align: center;
-      padding: 30px 15px;
-    }
+        .mesh-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(at 0% 0%, rgba(255, 69, 0, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(255, 140, 0, 0.05) 0px, transparent 50%);
+        }
 
-    h1 {
-      font-size: 3.5rem;
-      margin-bottom: 5px;
-      letter-spacing: 2px;
-    }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-    h2 {
-      font-size: 1.6rem;
-      font-family: Arial, sans-serif;
-      font-weight: normal;
-      margin-top: 0;
-      color: #ffcc00;
-    }
+        .header-title {
+            font-size: clamp(3rem, 12vw, 9rem);
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
 
-    #countdown {
-      font-size: 2.8rem;
-      margin: 25px 0;
-      padding: 20px;
-      border: 4px solid #ff0000;
-      display: inline-block;
-      background: rgba(0,0,0,0.6);
-    }
+        @keyframes pulse-orange {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.2); }
+        }
+        .status-dot {
+            width: 8px; height: 8px;
+            background-color: #ff4500;
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulse-orange 2s infinite;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="mesh-bg"></div>
 
-    .subtitle {
-      font-family: Arial, sans-serif;
-      font-size: 1.2rem;
-      margin-top: 15px;
-      opacity: 0.9;
-    }
+    <nav class="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
+        <div class="glass px-5 py-2 rounded-full text-[10px] tracking-[0.2em] font-bold flex items-center">
+            <span class="status-dot mr-3"></span> STATUS: FERAL
+        </div>
+        <div class="text-[10px] tracking-widest font-bold opacity-40 text-right uppercase">
+            Rome, IT <br> Jan 23-26, 2026
+        </div>
+    </nav>
 
-    img {
-      width: 95%;
-      max-width: 500px;
-      margin: 20px auto;
-      display: block;
-      border-radius: 12px;
-      border: 3px solid #ffcc00;
-    }
+    <main class="max-w-7xl mx-auto px-6 pb-24">
+        
+        <header class="mt-10 mb-16">
+            <h1 class="header-title">
+                KEV IN <span class="text-orange-600">ROME</span>
+            </h1>
+            <p class="mt-6 max-w-2xl text-xl text-zinc-400 font-medium leading-relaxed">
+                Three nights of Roman conquest. Tactical precision on the mini-bus. Ferguson-tier clinical execution in the streets.
+            </p>
+        </header>
 
-    footer {
-      font-family: Arial, sans-serif;
-      font-size: 0.9rem;
-      opacity: 0.7;
-      margin-top: 40px;
-    }
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
+            <div class="glass p-8 rounded-[2rem]">
+                <span id="days" class="text-6xl font-black block mb-1">00</span>
+                <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Days to deployment</span>
+            </div>
+            <div class="glass p-8 rounded-[2rem]">
+                <span id="hours" class="text-6xl font-black block mb-1">00</span>
+                <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Hours remaining</span>
+            </div>
+            <div class="glass p-8 rounded-[2rem]">
+                <span id="mins" class="text-6xl font-black block mb-1">00</span>
+                <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Minutes of peace</span>
+            </div>
+            <div class="glass p-8 rounded-[2rem]">
+                <span id="secs" class="text-6xl font-black block mb-1 text-orange-600">00</span>
+                <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Seconds til feral</span>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-5 gap-6">
+            <div class="lg:col-span-3 relative rounded-[2.5rem] overflow-hidden group border border-white/10 h-[500px]">
+                <img src="hero.png" class="w-full h-full object-cover grayscale transition duration-700 group-hover:grayscale-0 scale-105 group-hover:scale-100" alt="The Crew">
+                <div class="absolute bottom-8 left-8 right-8">
+                    <div class="glass p-6 rounded-2xl">
+                        <p class="text-sm italic font-medium leading-relaxed">
+                            "If Evan Ferguson can hold the line for Brighton, we can hold the line for the 06:40 flight. Mini-bus formation is non-negotiable."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 glass p-10 rounded-[2.5rem] flex flex-col justify-center">
+                <h3 class="text-xs font-black tracking-[0.3em] text-orange-600 mb-6 uppercase">The Tactical Playbook</h3>
+                <ul class="space-y-6">
+                    <li class="group">
+                        <span class="block text-zinc-500 text-[10px] uppercase font-bold mb-1">Phase 01</span>
+                        <p class="font-bold text-lg group-hover:text-orange-500 transition-colors">The 06:40 Mini-Bus Extraction</p>
+                    </li>
+                    <li class="group">
+                        <span class="block text-zinc-500 text-[10px] uppercase font-bold mb-1">Phase 02</span>
+                        <p class="font-bold text-lg group-hover:text-orange-500 transition-colors">3 Nights of Roman Ruin</p>
+                    </li>
+                    <li class="group">
+                        <span class="block text-zinc-500 text-[10px] uppercase font-bold mb-1">Phase 03</span>
+                        <p class="font-bold text-lg group-hover:text-orange-500 transition-colors">Return to Civilisation (Optional)</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // TARGET: Fri, 23 Jan 2026 6:40am
+        const targetDate = new Date("Jan 23, 2026 06:40:00").getTime();
+
+        function updateTimer() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = d < 10 ? '0'+d : d;
+            document.getElementById("hours").innerText = h < 10 ? '0'+h : h;
+            document.getElementById("mins").innerText = m < 10 ? '0'+m : m;
+            document.getElementById("secs").innerText = s < 10 ? '0'+s : s;
+
+            if (distance < 0) {
+                document.querySelector('main').innerHTML = "<h1 class='header-title text-center py-20'>GLORY ATTAINED.</h1>";
+            }
+        }
+
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+</body>
+</html>
