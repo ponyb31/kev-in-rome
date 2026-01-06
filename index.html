@@ -3,336 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KEV IN ROME 2026</title>
+    <title>KEV IN ROME 2026 | MISSION CONTROL</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;700;900&display=swap');
         
         body { 
-            background-color: #0a0a0a; 
+            background-color: #000; 
             font-family: 'Inter', sans-serif;
             color: white;
             overflow-x: hidden;
         }
 
-        .mesh-bg {
+        .font-sync { font-family: 'Syncopate', sans-serif; }
+
+        /* THE CENTERPIECE: HERO BACKGROUND */
+        .hero-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -2;
+            background: url('https://kevinrome.vip/hero.png') no-repeat center center;
+            background-size: cover;
+            filter: brightness(0.4) saturate(0.8); /* Adjusted so text is readable */
+        }
+
+        /* Overlay to ensure readability and "Modern" look */
+        .hero-overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1;
-            background: 
-                radial-gradient(at 0% 0%, rgba(34, 197, 94, 0.1) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(245, 158, 11, 0.05) 0px, transparent 50%);
+            background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.9) 100%);
         }
 
-        .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(15px);
+        /* Irish Flag Text Styling */
+        .flag-text-kev { color: #16a34a; text-shadow: 0 0 40px rgba(22, 163, 74, 0.6); }
+        .flag-text-in { color: #ffffff; text-shadow: 0 0 30px rgba(255, 255, 255, 0.4); }
+        .flag-text-rome { color: #f59e0b; text-shadow: 0 0 40px rgba(245, 158, 11, 0.6); }
+
+        .glass-panel {
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
         }
 
-        .header-title {
-            font-size: clamp(3rem, 12vw, 9rem);
-            line-height: 0.9;
-            letter-spacing: -0.04em;
-            font-weight: 900;
-            text-transform: uppercase;
+        .playbook-step {
+            border-left: 2px solid rgba(245, 158, 11, 0.3);
+            padding-left: 1.5rem;
+            position: relative;
         }
-
-        @keyframes pulse-green {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.4; transform: scale(1.2); }
-        }
-        .status-dot {
+        .playbook-step::before {
+            content: '';
+            position: absolute;
+            left: -5px; top: 0;
             width: 8px; height: 8px;
-            background-color: #22c55e;
+            background: #f59e0b;
             border-radius: 50%;
-            display: inline-block;
-            animation: pulse-green 2s infinite;
+            box-shadow: 0 0 10px #f59e0b;
         }
-        .bg-colosseum { background-image: url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1000&auto=format&fit=crop'); background-size: cover; background-position: center; }
-        .bg-ferguson { background-image: url('https://focus.independent.ie/thumbor/588unmTklkQjZiAGbFTagaq11I8=/0x32:3137x2123/960x640/prod-mh-ireland/1dd767eb-64c7-4ed3-992e-36341b3e3ddd/0020e8ef-f45f-4f4b-8111-05f80c686027/Y-LEC-ROM%20%2811%29.jpg'); background-size: cover; background-position: top; }
-        .bg-roma { background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/AS_Roma_logo_%282017%29.svg/1200px-AS_Roma_logo_%282017%29.svg.png'); background-size: contain; background-repeat: no-repeat; background-position: center; }
-        .bg-bus { background-image: url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1000&auto=format&fit=crop'); background-size: cover; background-position: center; }
 
-        .timer-box { position: relative; overflow: hidden; }
-        .timer-overlay { 
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
-            opacity: 0.07; z-index: 0; pointer-events: none;
+        .img-overlay {
+            position: absolute; inset: 0;
+            opacity: 0.1; mix-blend-mode: overlay;
+            pointer-events: none;
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(100%);
         }
-        .timer-content { position: relative; z-index: 10; }
+
+        .time-gradient {
+            background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.4) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Custom scrollbar for that slick look */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #16a34a; border-radius: 10px; }
     </style>
 </head>
 <body class="antialiased">
-    <div class="mesh-bg"></div>
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
 
-    <nav class="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
-        <div class="glass px-5 py-2 rounded-full text-[10px] tracking-[0.2em] font-bold flex items-center">
-            <span class="status-dot mr-3"></span> STATUS: Awaiting deployment
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-black/40 backdrop-blur-md border-b border-white/5">
+        <div class="flex items-center gap-2">
+            <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+            <span class="text-[9px] font-sync tracking-widest uppercase opacity-80">Mission: Live</span>
         </div>
-        <div class="text-[10px] tracking-widest font-bold opacity-40 text-right uppercase">
-            Rome, IT <br> Jan 23-26, 2026
-        </div>
+        <div class="text-[9px] font-sync tracking-widest text-amber-500">23-26 JAN // 2026</div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 pb-24">
+    <main class="max-w-7xl mx-auto px-5 pt-32 pb-12">
         
-        <header class="mt-10 mb-16">
-            <h1 class="header-title">
-                <span class="text-green-500">KEV</span> 
-                <span class="text-white">IN</span> 
-                <span class="text-amber-500">ROME</span>
+        <header class="mb-12 text-center md:text-left">
+            <h1 class="font-sync text-6xl md:text-9xl font-black tracking-tighter leading-[0.85] mb-6">
+                <span class="flag-text-kev">KEV</span><br>
+                <span class="flag-text-in text-4xl md:text-7xl block my-2">IN</span>
+                <span class="flag-text-rome">ROME</span>
             </h1>
-            <p class="mt-6 max-w-2xl text-xl text-zinc-400 font-medium leading-relaxed">
-                Three nights of Roman conquest. Carnage awaits. 
+            <p class="text-white/70 text-[10px] md:text-xs font-sync uppercase tracking-[0.4em]">
+                Three nights of Roman conquest. Carnage awaits.
             </p>
         </header>
 
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
-            <div class="glass p-8 rounded-[2rem] timer-box">
-                <div class="timer-overlay bg-colosseum"></div>
-                <div class="timer-content">
-                    <span id="days" class="text-6xl font-black block mb-1">00</span>
-                    <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Beautiful Days</span>
-                </div>
-            </div>
-
-            <div class="glass p-8 rounded-[2rem] timer-box">
-                <div class="timer-overlay bg-ferguson"></div>
-                <div class="timer-content">
-                    <span id="hours" class="text-6xl font-black block mb-1">00</span>
-                    <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Heavenly Hours</span>
-                </div>
-            </div>
-
-            <div class="glass p-8 rounded-[2rem] timer-box">
-                <div class="timer-overlay bg-roma"></div>
-                <div class="timer-content">
-                    <span id="mins" class="text-6xl font-black block mb-1">00</span>
-                    <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Magnificent Minutes</span>
-                </div>
-            </div>
-
-            <div class="glass p-8 rounded-[2rem] timer-box">
-                <div class="timer-overlay bg-bus"></div>
-                <div class="timer-content">
-                    <span id="secs" class="text-6xl font-black block mb-1 text-amber-500">00</span>
-                    <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Seconds til ROME TIME BABY</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="mb-20 glass p-6 rounded-[2rem] flex flex-col md:flex-row items-center justify-between border-green-500/20">
-            <div class="flex items-center mb-4 md:mb-0">
-                <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4 shadow-[0_0_20px_rgba(34,197,94,0.4)]">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-                    </svg>
-                </div>
-                <div>
-                    <h3 class="text-xs font-black tracking-widest text-green-500 uppercase">Official Theme Song</h3>
-                    <p class="font-bold text-lg">Even Ferguson Mini bus Hore</p>
-                </div>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
             
-            <div class="flex items-center space-x-4">
-                <a href="https://lyricsintosong.com/play/1babaf36-878f-4289-99f9-2eb7485aaba1" target="_blank" class="px-8 py-3 bg-white text-black rounded-xl font-black uppercase text-[10px] tracking-[0.2em] hover:bg-green-500 hover:text-white transition-all">
-                    Open Player
-                </a>
+            <div class="md:col-span-8 grid grid-cols-2 lg:grid-cols-4 gap-3">
+                <div class="glass-panel p-6 rounded-[2rem] relative overflow-hidden">
+                    <div class="img-overlay" style="background-image: url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=400')"></div>
+                    <p class="relative text-[9px] font-sync text-green-500 mb-6 uppercase">Days</p>
+                    <span id="days" class="relative text-5xl font-black time-gradient font-sync">00</span>
+                </div>
+                <div class="glass-panel p-6 rounded-[2rem] relative overflow-hidden">
+                    <div class="img-overlay" style="background-image: url('https://focus.independent.ie/thumbor/588unmTklkQjZiAGbFTagaq11I8=/0x32:3137x2123/960x640/prod-mh-ireland/1dd767eb-64c7-4ed3-992e-36341b3e3ddd/0020e8ef-f45f-4f4b-8111-05f80c686027/Y-LEC-ROM%20%2811%29.jpg')"></div>
+                    <p class="relative text-[9px] font-sync text-zinc-400 mb-6 uppercase">Hours</p>
+                    <span id="hours" class="relative text-5xl font-black time-gradient font-sync">00</span>
+                </div>
+                <div class="glass-panel p-6 rounded-[2rem] relative overflow-hidden">
+                    <div class="img-overlay" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/AS_Roma_logo_%282017%29.svg/1200px-AS_Roma_logo_%282017%29.svg.png'); background-size: 40%; background-repeat: no-repeat;"></div>
+                    <p class="relative text-[9px] font-sync text-zinc-400 mb-6 uppercase">Mins</p>
+                    <span id="mins" class="relative text-5xl font-black time-gradient font-sync">00</span>
+                </div>
+                <div class="glass-panel p-6 rounded-[2rem] relative overflow-hidden border-amber-500/30">
+                    <div class="img-overlay" style="background-image: url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=400')"></div>
+                    <p class="relative text-[9px] font-sync text-amber-500 mb-6 uppercase animate-pulse">Secs</p>
+                    <span id="secs" class="relative text-5xl font-black text-amber-500 font-sync">00</span>
+                </div>
             </div>
-        </div>
-        
-        <div class="grid lg:grid-cols-5 gap-6">
-            <div class="lg:col-span-3 relative rounded-[2.5rem] overflow-hidden group border border-white/10 h-[500px]">
-                <img src="hero.png" class="w-full h-full object-cover grayscale transition duration-700 group-hover:grayscale-0 scale-105 group-hover:scale-100" alt="The Crew">
-                <div class="absolute bottom-8 left-8 right-8">
-                    <div class="glass p-6 rounded-2xl">
-                        <p class="text-sm italic font-medium leading-relaxed">
-                            "There is The Right Way, The Wrong Way and then THE CONWAY."
-                        </p>
+
+            <div class="md:col-span-4 glass-panel p-8 rounded-[2.5rem]">
+                <h3 class="text-[10px] font-sync text-amber-500 mb-8 tracking-[0.3em] uppercase">Tactical Playbook</h3>
+                <div class="space-y-6">
+                    <div class="playbook-step">
+                        <span class="block text-[9px] text-zinc-500 font-sync mb-1">Phase 01</span>
+                        <p class="font-bold text-sm uppercase">Get on the fucking flight</p>
+                    </div>
+                    <div class="playbook-step">
+                        <span class="block text-[9px] text-zinc-500 font-sync mb-1">Phase 02</span>
+                        <p class="font-bold text-sm uppercase italic">ROME BABY</p>
+                    </div>
+                    <div class="playbook-step">
+                        <span class="block text-[9px] text-zinc-500 font-sync mb-1">Phase 03</span>
+                        <p class="font-bold text-sm uppercase">Drinking</p>
+                    </div>
+                    <div class="playbook-step">
+                        <span class="block text-[9px] text-zinc-500 font-sync mb-1">Phase 04</span>
+                        <p class="font-bold text-sm uppercase">The match</p>
+                    </div>
+                    <div class="playbook-step">
+                        <span class="block text-[9px] text-zinc-500 font-sync mb-1">Phase 05</span>
+                        <p class="font-bold text-sm uppercase">Return to civilization</p>
                     </div>
                 </div>
             </div>
 
-            <div class="lg:col-span-2 glass p-10 rounded-[2.5rem] flex flex-col justify-center">
-                <h3 class="text-xs font-black tracking-[0.3em] text-amber-500 mb-6 uppercase">The Tactical Playbook</h3>
-                <ul class="space-y-6">
-                    <li class="group">
-                        <span class="block text-zinc-500 text-[10px] uppercase font-bold mb-1">Phase 01</span>
-                        <p class="font-bold text-lg group-hover:text-green-500 transition-colors">Get on the fucking flight</p>
-                    </li>
-                    <li class="group">
-                        <span class="block text-zinc-500 text-[10px] uppercase font-bold mb-1">Phase 02</span>
-                        <p class="font-bold text-lg group-hover:text-green-500 transition-colors">ROME BABY</p>
-                    </li>
-                    <li class="group">
-                        <span class="block text-zinc-500 text-[10px] uppercase font-bold mb-1">Phase 03</span>
-                        <p class="font-bold text-lg group-hover:text-green-500 transition-colors">Drinking</p>
-                    </li>
-                    <li class="group">
-                        <span class="block text-zinc-500 text-[10px] uppercase font-bold mb-1">Phase 04</span>
-                        <p class="font-bold text-lg group-hover:text-green-500 transition-colors">The match</p>
-                    </li>
-                    <li class="group">
-                        <span class="block text-zinc-500 text-[10px] uppercase font-bold mb-1">Phase 05</span>
-                        <p class="font-bold text-lg group-hover:text-green-500 transition-colors">Return to civilization</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <section class="mt-32 text-center">
-            <h2 class="text-[10px] tracking-[0.5em] text-amber-500 font-black uppercase mb-4">Maximum Brutality</h2>
-            <p class="header-title italic opacity-20">ARE YOU NOT ENTERTAINED?</p>
-            <p class="text-zinc-500 mt-4 tracking-widest uppercase text-[12px] font-bold">What we do in Trastevere echoes in eternity</p>
-        </section>
-
-        <section class="mt-20">
-            <div class="flex justify-between items-end mb-10 border-b border-white/10 pb-6">
-                <h2 class="text-4xl font-black tracking-tighter uppercase italic">The Roman Legion</h2>
-                <span class="text-amber-500 font-mono text-sm">[ 21 UNITS DEPLOYED ]</span>
+            <div class="md:col-span-12 glass-panel p-5 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between border-green-500/20 group cursor-pointer" onclick="window.open('https://lyricsintosong.com/play/1babaf36-878f-4289-99f9-2eb7485aaba1')">
+                <div class="flex items-center gap-6">
+                    <div class="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center shadow-[0_0_25px_rgba(22,163,74,0.4)] group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div>
+                        <p class="text-[9px] font-sync text-green-500 mb-1 uppercase tracking-widest">Theme Anthem</p>
+                        <h4 class="font-black text-xl tracking-tighter uppercase italic">Evan Ferguson Mini bus Hore</h4>
+                    </div>
+                </div>
+                <div class="mt-4 md:mt-0 px-8 py-3 bg-white/10 hover:bg-white hover:text-black rounded-full text-[10px] font-sync transition-all uppercase tracking-widest border border-white/10">
+                    Play Anthem
+                </div>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
-                <div class="glass py-4 px-6 rounded-xl border-white/5 hover:border-green-500/50 transition-colors group">
-                    <span class="text-[10px] text-zinc-600 block mb-1 group-hover:text-green-500 transition-colors">Legatus Legionis</span>
-                    <p class="font-bold tracking-tight">KEV</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Tribunus Laticlavius</span>
-                    <p class="font-bold tracking-tight">Steve F</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Steve B</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Ro</p>
-                </div>      
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Dave</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Tom</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Fergal</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Alan</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Aiden</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Ollie</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Colm</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Ed</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Phil</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Adrian</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Patty</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Paul</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Sean</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Anthony</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Brian</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">JJ</p>
-                </div>
-                <div class="glass py-4 px-6 rounded-xl border-white/5">
-                    <span class="text-[10px] text-zinc-600 block mb-1">Centurion</span>
-                    <p class="font-bold tracking-tight">Micheal</p>
-                </div>  
-            </div>      
-        </section>      
-
-        <section class="mt-32 grid lg:grid-cols-2 gap-8">
-            <div class="glass p-10 rounded-[2.5rem] border-amber-500/20">
+            <div class="md:col-span-12 glass-panel p-8 rounded-[2.5rem]">
                 <div class="flex justify-between items-center mb-8">
-                    <h3 class="text-xs font-black tracking-[0.3em] text-amber-500 uppercase">Air Support (Aer Lingus)</h3>
-                    <span class="status-dot"></span>
+                    <h2 class="text-[10px] font-sync uppercase tracking-[0.3em] text-white/50">The Roman Legion</h2>
+                    <span class="text-amber-500 font-bold text-[10px] font-sync">21 Units Deployed</span>
                 </div>
-                
-                <div class="space-y-8">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <p class="text-[10px] uppercase text-zinc-500 font-bold mb-1">Outbound / EI 0402</p>
-                            <p class="text-2xl font-black">DUB <span class="text-amber-500">→</span> FCO</p>
-                            <p class="text-sm text-zinc-400">Fri, 23 Jan | 06:50 — 10:55</p>
-                        </div>
-                        <div class="text-right">
-                            <p class="text-[10px] uppercase text-zinc-500 font-bold mb-1">Duration</p>
-                            <p class="text-sm font-bold">3h 05m</p>
-                        </div>
-                    </div>
-
-                    <div class="h-[1px] w-full bg-white/5"></div>
-
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <p class="text-[10px] uppercase text-zinc-500 font-bold mb-1">Inbound / EI 0403</p>
-                            <p class="text-2xl font-black">FCO <span class="text-amber-500">→</span> DUB</p>
-                            <p class="text-sm text-zinc-400">Mon, 26 Jan | 11:35 — 13:50</p>
-                        </div>
-                        <div class="text-right">
-                            <p class="text-[10px] uppercase text-zinc-500 font-bold mb-1">Status</p>
-                            <p class="text-sm font-bold text-green-500 uppercase tracking-widest">Confirmed</p>
-                        </div>
-                    </div>
+                <div class="flex flex-wrap gap-2">
+                    <div class="px-5 py-2 bg-green-600 text-white rounded-full font-black text-xs uppercase tracking-widest">KEV</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10 hover:border-amber-500/50 transition-colors">Steve F</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Steve B</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Ro</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Dave</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Tom</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Fergal</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Alan</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Aiden</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Ollie</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Colm</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Ed</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Phil</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Adrian</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Patty</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Paul</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Sean</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Anthony</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Brian</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">JJ</div>
+                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Micheal</div>
                 </div>
             </div>
+        </div>
 
-            <div class="glass p-10 rounded-[2.5rem] flex flex-col justify-between relative overflow-hidden">
-                <div class="absolute top-[-20px] right-[-20px] text-9xl font-black opacity-[0.03] pointer-events-none">ROME</div>
-                
-                <div>
-                    <h3 class="text-xs font-black tracking-[0.3em] text-amber-500 mb-8 uppercase">Imperial Base</h3>
-                    <p class="text-4xl font-black mb-2 tracking-tighter">HOTEL QUIRINALE</p>
-                    <p class="text-zinc-400 mb-6 font-medium italic">Via Nazionale, 7, 00184 Roma RM</p>
-                </div>
+        <footer class="mt-20 text-center pb-10">
+            <p class="font-sync text-[8px] uppercase tracking-[1.5em] opacity-40">What we do in Trastevere echoes in eternity</p>
+        </footer>
 
-                <div class="space-y-4">
-                    <a href="https://www.hotelquirinale.it/en/index" target="_blank" class="block w-full py-4 bg-white text-black text-center rounded-xl font-black uppercase text-xs tracking-widest hover:bg-amber-600 hover:text-white transition-all">
-                        View Base Map
-                    </a>
-                    <p class="text-[10px] text-center text-zinc-500 font-bold uppercase tracking-widest">Check-in: 23 Jan 2026</p>
-                </div>
-            </div>
-        </section>
     </main>
 
     <script>
@@ -351,10 +227,6 @@
             document.getElementById("hours").innerText = h < 10 ? '0'+h : h;
             document.getElementById("mins").innerText = m < 10 ? '0'+m : m;
             document.getElementById("secs").innerText = s < 10 ? '0'+s : s;
-
-            if (distance < 0) {
-                document.querySelector('main').innerHTML = "<h1 class='header-title text-center py-20'><span class='text-green-500'>GLORY</span> <span class='text-white'>ATTAINED</span>.</h1>";
-            }
         }
 
         setInterval(updateTimer, 1000);
@@ -362,10 +234,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
