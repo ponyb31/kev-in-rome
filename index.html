@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stag Party Countdown</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #111, #222);
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    #countdown {
+      font-size: 2.5rem;
+      margin: 20px 0;
+      color: #ffcc00;
+    }
+
+    img {
+      width: 90%;
+      max-width: 500px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🍻 Stag Party Incoming 🍻</h1>
+  <p>Countdown to chaos</p>
+
+  <div id="countdown">Loading...</div>
+
+  <img src="pic1.jpg" alt="Memory 1">
+  <img src="pic2.jpg" alt="Memory 2">
+
+  <script>
+    const targetDate = new Date("2026-01-23T06:50:00").getTime();
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        document.getElementById("countdown").innerHTML = "🎉 LET’S GO 🎉";
+        clearInterval(timer);
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("countdown").innerHTML =
+        `${days}d ${hours}h ${mins}m ${secs}s`;
+    }, 1000);
+  </script>
+
+</body>
+</html>
