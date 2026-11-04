@@ -23,7 +23,7 @@
             z-index: -2;
             background: url('legionlads.png') no-repeat center center;
             background-size: cover;
-            filter: brightness(0.3) saturate(0.85);
+            filter: brightness(0.25) saturate(0.85);
         }
 
         .hero-overlay {
@@ -61,7 +61,7 @@
 
         .img-overlay {
             position: absolute; inset: 0;
-            opacity: 0.15; mix-blend-mode: overlay;
+            opacity: 0.18; mix-blend-mode: overlay;
             pointer-events: none;
             background-size: cover;
             background-position: center;
@@ -80,8 +80,8 @@
     </style>
 </head>
 <body class="antialiased">
-    <div class="-bg"></div>
-    <div class="-overlay"></div>
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
 
     <!-- Navigation Header -->
     <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-black/50 backdrop-blur-md border-b border-white/10">
@@ -116,7 +116,7 @@
 
     <main class="max-w-7xl mx-auto px-5 pt-32 pb-12">
         
-        <!--  Header -->
+        <!-- Hero Header -->
         <header class="mb-12 text-center md:text-left">
             <h1 class="font-sync text-5xl md:text-8xl font-black tracking-tighter leading-[0.85] mb-6">
                 <span class="flag-text-hamburg">HAMBURG</span><br>
@@ -130,25 +130,25 @@
 
         <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
             
-            <!-- Countdown Timer Block -->
+            <!-- Countdown Timer Block (legionlads.png background) -->
             <div class="md:col-span-8 grid grid-cols-2 lg:grid-cols-4 gap-3">
                 <div class="glass-panel p-6 rounded-[2rem] relative overflow-hidden">
-                    <div class="img-overlay" style="background-image: url('.png')"></div>
+                    <div class="img-overlay" style="background-image: url('legionlads.png')"></div>
                     <p class="relative text-[9px] font-sync text-red-500 mb-6 uppercase">Days</p>
                     <span id="days" class="relative text-5xl font-black time-gradient font-sync">00</span>
                 </div>
                 <div class="glass-panel p-6 rounded-[2rem] relative overflow-hidden">
-                    <div class="img-overlay" style="background-image: url('hero.png')"></div>
+                    <div class="img-overlay" style="background-image: url('legionlads.png')"></div>
                     <p class="relative text-[9px] font-sync text-zinc-400 mb-6 uppercase">Hours</p>
                     <span id="hours" class="relative text-5xl font-black time-gradient font-sync">00</span>
                 </div>
                 <div class="glass-panel p-6 rounded-[2rem] relative overflow-hidden">
-                    <div class="img-overlay" style="background-image: url('hero.png')"></div>
+                    <div class="img-overlay" style="background-image: url('legionlads.png')"></div>
                     <p class="relative text-[9px] font-sync text-zinc-400 mb-6 uppercase">Mins</p>
                     <span id="mins" class="relative text-5xl font-black time-gradient font-sync">00</span>
                 </div>
                 <div class="glass-panel p-6 rounded-[2rem] relative overflow-hidden border-amber-500/30">
-                    <div class="img-overlay" style="background-image: url('hero.png')"></div>
+                    <div class="img-overlay" style="background-image: url('legionlads.png')"></div>
                     <p class="relative text-[9px] font-sync text-amber-500 mb-6 uppercase animate-pulse">Secs</p>
                     <span id="secs" class="relative text-5xl font-black text-amber-500 font-sync">00</span>
                 </div>
@@ -222,10 +222,10 @@
 
         <br>
 
-        <!-- Match Day Banner: HSV vs Eintracht Frankfurt -->
+        <!-- Match Day Banner: HSV vs Eintracht Frankfurt (legionlads.png blended background) -->
         <div class="md:col-span-12 glass-panel rounded-[2.5rem] border-blue-500/30 relative overflow-hidden group">
             <div class="absolute inset-0 z-0 transition-transform duration-700 group-hover:scale-105" 
-                 style="background: linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.92) 100%), 
+                 style="background: linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.92) 100%), 
                         url('legionlads.png'); 
                         background-size: cover; 
                         background-position: center;">
@@ -436,7 +436,7 @@
                 </div>
             </div>
 
-            <!-- Flights Block (Updated FR5043 & FR5044) -->
+            <!-- Flights Block (FR5043 & FR5044) -->
             <div class="glass-panel p-8 rounded-[2.5rem] border-white/10 flex flex-col justify-center">
                 <div class="space-y-8">
                     <div>
@@ -475,17 +475,17 @@
                             </div>
                             <div class="text-right">
                                 <p class="text-2xl font-black font-sync">17:45</p>
-                                <p class="text-[9px] text-zinc-500 font-sync tracking-tighter uppercase">FR 5044 | CONFIRMED</p>
+                                <p class="text-[9px] font-sync tracking-tighter uppercase">FR 5044 | CONFIRMED</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Hotel Base of Operations Block (NH Collection Hamburg City) -->
+            <!-- Hotel Base of Operations Block (legionlads.png blended background) -->
             <div class="glass-panel p-8 rounded-[2.5rem] relative overflow-hidden border-white/10 group">
-                <div class="absolute inset-0 opacity-15 grayscale group-hover:opacity-25 transition-opacity pointer-events-none" 
-                     style="background-image: url('hero.png'); background-size: cover; background-position: center;"></div>
+                <div class="absolute inset-0 opacity-18 grayscale group-hover:opacity-25 transition-opacity pointer-events-none" 
+                     style="background-image: url('legionlads.png'); background-size: cover; background-position: center;"></div>
                 
                 <div class="relative z-10 h-full flex flex-col justify-between">
                     <div class="flex justify-between items-start gap-4">
