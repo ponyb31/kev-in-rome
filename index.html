@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KEV IN ROME 2026 | MISSION CONTROL</title>
+    <title>HAMBURG EXPEDITION 2027 | MISSION CONTROL</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;700;900&display=swap');
@@ -21,31 +21,31 @@
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             z-index: -2;
-            background: url('https://kevinrome.vip/hero.png') no-repeat center center;
+            background: url('hero.png') no-repeat center center;
             background-size: cover;
-            filter: brightness(0.4) saturate(0.8);
+            filter: brightness(0.3) saturate(0.85);
         }
 
         .hero-overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1;
-            background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.9) 100%);
+            background: radial-gradient(circle at center, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.95) 100%);
         }
 
-        .flag-text-kev { color: #16a34a; text-shadow: 0 0 40px rgba(22, 163, 74, 0.6); }
-        .flag-text-in { color: #ffffff; text-shadow: 0 0 30px rgba(255, 255, 255, 0.4); }
-        .flag-text-rome { color: #f59e0b; text-shadow: 0 0 40px rgba(245, 158, 11, 0.6); }
+        .flag-text-hamburg { color: #ef4444; text-shadow: 0 0 40px rgba(239, 68, 68, 0.6); }
+        .flag-text-2027 { color: #ffffff; text-shadow: 0 0 30px rgba(255, 255, 255, 0.4); }
+        .flag-text-tour { color: #eab308; text-shadow: 0 0 40px rgba(234, 179, 8, 0.6); }
 
         .glass-panel {
-            background: rgba(10, 10, 10, 0.6);
-            backdrop-filter: blur(12px);
+            background: rgba(12, 12, 12, 0.65);
+            backdrop-filter: blur(14px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
         }
 
         .playbook-step {
-            border-left: 2px solid rgba(245, 158, 11, 0.3);
+            border-left: 2px solid rgba(234, 179, 8, 0.4);
             padding-left: 1.5rem;
             position: relative;
         }
@@ -54,9 +54,9 @@
             position: absolute;
             left: -5px; top: 0;
             width: 8px; height: 8px;
-            background: #f59e0b;
+            background: #eab308;
             border-radius: 50%;
-            box-shadow: 0 0 10px #f59e0b;
+            box-shadow: 0 0 10px #eab308;
         }
 
         .img-overlay {
@@ -76,537 +76,571 @@
         
         ::-webkit-scrollbar { width: 5px; }
         ::-webkit-scrollbar-track { background: #000; }
-        ::-webkit-scrollbar-thumb { background: #16a34a; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: #ef4444; border-radius: 10px; }
     </style>
 </head>
 <body class="antialiased">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
 
-    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-black/40 backdrop-blur-md border-b border-white/5">
-        <div class="flex items-center gap-2">
-            <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-            <span class="text-[9px] font-sync tracking-widest uppercase opacity-80">Mission: Awaiting deployment</span>
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-black/50 backdrop-blur-md border-b border-white/10">
+        <div class="flex items-center gap-3">
+            <div class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></div>
+            <span class="text-[9px] font-sync tracking-widest uppercase opacity-90">Mission: Hamburg Expedition</span>
         </div>
-        <div class="text-[9px] font-sync tracking-widest text-amber-500">23-26 JAN // 2026</div>
+        
+        <div class="flex items-center gap-6">
+            <!-- Expedition Archives Navigation -->
+            <div class="relative group">
+                <button class="text-[9px] font-sync tracking-widest text-zinc-300 hover:text-white flex items-center gap-1.5 uppercase transition-colors py-1">
+                    <svg class="w-3 h-3 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    Archives
+                    <svg class="w-2.5 h-2.5 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="absolute right-0 top-full mt-2 w-48 glass-panel rounded-2xl p-2 hidden group-hover:block border border-white/10 shadow-2xl">
+                    <a href="https://kevinrome.vip/kevinrome2026.html" class="block px-4 py-2.5 text-[9px] font-sync text-zinc-300 hover:text-white hover:bg-white/10 rounded-xl transition-all">
+                        🇮🇹 Rome 2026 (Kev In Rome)
+                    </a>
+                    <div class="px-4 py-2 text-[8px] font-sync text-zinc-600 uppercase border-t border-white/5 mt-1">
+                        🇩🇪 Hamburg 2027 (Current)
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-[9px] font-sync tracking-widest text-amber-500 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+                05-08 MAR // 2027
+            </div>
+        </div>
     </nav>
 
     <main class="max-w-7xl mx-auto px-5 pt-32 pb-12">
         
+        <!-- Hero Header -->
         <header class="mb-12 text-center md:text-left">
-            <h1 class="font-sync text-6xl md:text-9xl font-black tracking-tighter leading-[0.85] mb-6">
-                <span class="flag-text-kev">KEV</span><br>
-                <span class="flag-text-in text-4xl md:text-7xl block my-2">IN</span>
-                <span class="flag-text-rome">ROME</span>
+            <h1 class="font-sync text-5xl md:text-8xl font-black tracking-tighter leading-[0.85] mb-6">
+                <span class="flag-text-hamburg">HAMBURG</span><br>
+                <span class="flag-text-2027 text-3xl md:text-6xl block my-2">EXPEDITION</span>
+                <span class="flag-text-tour text-4xl md:text-7xl">2027</span>
             </h1>
             <p class="text-white/70 text-[10px] md:text-xs font-sync uppercase tracking-[0.4em]">
-                Three nights of Roman conquest. Carnage awaits.
+                Ten Units Deployed to Northern Germany. St. Pauli & HSV Territory.
             </p>
         </header>
 
         <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
             
+            <!-- Countdown Timer Block -->
             <div class="md:col-span-8 grid grid-cols-2 lg:grid-cols-4 gap-3">
                 <div class="glass-panel p-6 rounded-[2rem] relative overflow-hidden">
-                    <div class="img-overlay" style="background-image: url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=400')"></div>
-                    <p class="relative text-[9px] font-sync text-green-500 mb-6 uppercase">Days</p>
+                    <div class="img-overlay" style="background-image: url('hero.png')"></div>
+                    <p class="relative text-[9px] font-sync text-red-500 mb-6 uppercase">Days</p>
                     <span id="days" class="relative text-5xl font-black time-gradient font-sync">00</span>
                 </div>
                 <div class="glass-panel p-6 rounded-[2rem] relative overflow-hidden">
-                    <div class="img-overlay" style="background-image: url('https://focus.independent.ie/thumbor/588unmTklkQjZiAGbFTagaq11I8=/0x32:3137x2123/960x640/prod-mh-ireland/1dd767eb-64c7-4ed3-992e-36341b3e3ddd/0020e8ef-f45f-4f4b-8111-05f80c686027/Y-LEC-ROM%20%2811%29.jpg')"></div>
+                    <div class="img-overlay" style="background-image: url('hero.png')"></div>
                     <p class="relative text-[9px] font-sync text-zinc-400 mb-6 uppercase">Hours</p>
                     <span id="hours" class="relative text-5xl font-black time-gradient font-sync">00</span>
                 </div>
                 <div class="glass-panel p-6 rounded-[2rem] relative overflow-hidden">
-                    <div class="img-overlay" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/AS_Roma_logo_%282017%29.svg/1200px-AS_Roma_logo_%282017%29.svg.png'); background-size: 40%; background-repeat: no-repeat;"></div>
+                    <div class="img-overlay" style="background-image: url('hero.png')"></div>
                     <p class="relative text-[9px] font-sync text-zinc-400 mb-6 uppercase">Mins</p>
                     <span id="mins" class="relative text-5xl font-black time-gradient font-sync">00</span>
                 </div>
                 <div class="glass-panel p-6 rounded-[2rem] relative overflow-hidden border-amber-500/30">
-                    <div class="img-overlay" style="background-image: url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=400')"></div>
+                    <div class="img-overlay" style="background-image: url('hero.png')"></div>
                     <p class="relative text-[9px] font-sync text-amber-500 mb-6 uppercase animate-pulse">Secs</p>
                     <span id="secs" class="relative text-5xl font-black text-amber-500 font-sync">00</span>
                 </div>
             </div>
 
+            <!-- Tactical Playbook Block -->
             <div class="md:col-span-4 glass-panel p-8 rounded-[2.5rem]">
                 <h3 class="text-[10px] font-sync text-amber-500 mb-8 tracking-[0.3em] uppercase">Tactical Playbook</h3>
                 <div class="space-y-6">
                     <div class="playbook-step">
                         <span class="block text-[9px] text-zinc-500 font-sync mb-1">Phase 01</span>
-                        <p class="font-bold text-sm uppercase">Get on the fucking flight</p>
+                        <p class="font-bold text-sm uppercase">Ryanair FR5043 Departure (07:15)</p>
                     </div>
                     <div class="playbook-step">
                         <span class="block text-[9px] text-zinc-500 font-sync mb-1">Phase 02</span>
-                        <p class="font-bold text-sm uppercase italic">ROME BABY</p>
+                        <p class="font-bold text-sm uppercase italic">Check-in: NH Collection City</p>
                     </div>
                     <div class="playbook-step">
                         <span class="block text-[9px] text-zinc-500 font-sync mb-1">Phase 03</span>
-                        <p class="font-bold text-sm uppercase">Drinking</p>
+                        <p class="font-bold text-sm uppercase">Reeperbahn & Sternschanze Pub Crawl</p>
                     </div>
                     <div class="playbook-step">
                         <span class="block text-[9px] text-zinc-500 font-sync mb-1">Phase 04</span>
-                        <p class="font-bold text-sm uppercase">The match</p>
+                        <p class="font-bold text-sm uppercase">Matchday: Hamburger SV vs Eintracht</p>
                     </div>
                     <div class="playbook-step">
                         <span class="block text-[9px] text-zinc-500 font-sync mb-1">Phase 05</span>
-                        <p class="font-bold text-sm uppercase">Return to civilization</p>
+                        <p class="font-bold text-sm uppercase">FR5044 Extraction (16:40)</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Squad List Block (10 Roster Members) -->
             <div class="md:col-span-12 glass-panel p-8 rounded-[2.5rem]">
                 <div class="flex justify-between items-center mb-8">
-                    <h2 class="text-[10px] font-sync uppercase tracking-[0.3em] text-white/50">The Roman Legion</h2>
-                    <span class="text-amber-500 font-bold text-[10px] font-sync">20 Units Deployed</span>
+                    <h2 class="text-[10px] font-sync uppercase tracking-[0.3em] text-white/50">The German Brigade</h2>
+                    <span class="text-amber-500 font-bold text-[10px] font-sync">10 Units Confirmed</span>
                 </div>
-                <div class="flex flex-wrap gap-2">
-                    <div class="px-5 py-2 bg-green-600 text-white rounded-full font-black text-xs uppercase tracking-widest">KEV</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Steve F</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Steve B</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Ro</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Dave</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Tom</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Fergal</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Alan</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Aiden</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Ollie</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Colm</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Ed</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Paul</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Sean</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Anthony</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Brian</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">JJ</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Micheal</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Dan</div>
-                    <div class="px-5 py-2 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10">Benny</div>
+                <div class="flex flex-wrap gap-3">
+                    <div class="px-5 py-2.5 bg-red-600 text-white rounded-full font-black text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(239,68,68,0.4)]">Kev</div>
+                    <div class="px-5 py-2.5 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10 hover:border-amber-500/50 transition-colors">Steve F</div>
+                    <div class="px-5 py-2.5 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10 hover:border-amber-500/50 transition-colors">Steve B</div>
+                    <div class="px-5 py-2.5 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10 hover:border-amber-500/50 transition-colors">Dave</div>
+                    <div class="px-5 py-2.5 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10 hover:border-amber-500/50 transition-colors">Fergal</div>
+                    <div class="px-5 py-2.5 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10 hover:border-amber-500/50 transition-colors">Ollie</div>
+                    <div class="px-5 py-2.5 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10 hover:border-amber-500/50 transition-colors">Alan</div>
+                    <div class="px-5 py-2.5 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10 hover:border-amber-500/50 transition-colors">Aiden</div>
+                    <div class="px-5 py-2.5 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10 hover:border-amber-500/50 transition-colors">Ed</div>
+                    <div class="px-5 py-2.5 bg-white/5 rounded-full font-bold text-xs uppercase text-zinc-300 border border-white/10 hover:border-amber-500/50 transition-colors">Tom</div>
                 </div>
             </div>
         </div>
-		<br>	
-            <div class="md:col-span-12 glass-panel p-5 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between border-green-500/20 group cursor-pointer" onclick="window.open('https://lyricsintosong.com/play/1babaf36-878f-4289-99f9-2eb7485aaba1')">
-                <div class="flex items-center gap-6">
-                    <div class="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center shadow-[0_0_25px_rgba(22,163,74,0.4)] group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                    <div>
-                        <p class="text-[9px] font-sync text-green-500 mb-1 uppercase tracking-widest">Theme Anthem</p>
-                        <h4 class="font-black text-xl tracking-tighter uppercase italic">Evan Ferguson Mini bus Hore</h4>
-                    </div>
+
+        <br>	
+
+        <!-- Anthem Banner -->
+        <div class="md:col-span-12 glass-panel p-5 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between border-red-500/20 group cursor-pointer" onclick="window.open('https://lyricsintosong.com/play/1babaf36-878f-4289-99f9-2eb7485aaba1')">
+            <div class="flex items-center gap-6">
+                <div class="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-[0_0_25px_rgba(239,68,68,0.4)] group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="mt-4 md:mt-0 px-8 py-3 bg-white/10 hover:bg-white hover:text-black rounded-full text-[10px] font-sync transition-all uppercase tracking-widest border border-white/10">
-                    Play Anthem
-                </div>
-            </div><br>
-
-<div class="md:col-span-12 glass-panel rounded-[2.5rem] border-red-500/30 relative overflow-hidden group">
-    <div class="absolute inset-0 z-0 transition-transform duration-700 group-hover:scale-105" 
-         style="background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.9) 100%), 
-                url('https://media.asroma.com/prod/images/landscape_medium_fill/b98f447d3d75-20250306romaathletic-club-1176-1.webp'); 
-                background-size: cover; 
-                background-position: center;">
-    </div>
-
-    <div class="relative z-10 p-8 flex flex-col lg:flex-row justify-between gap-10">
-        <div class="flex-1">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
-                <div class="text-center md:text-left">
-                    <h3 class="text-[10px] font-sync text-red-500 mb-2 uppercase tracking-[0.3em]">Main Event: Match Day</h3>
-                    <p class="text-4xl md:text-5xl font-black uppercase tracking-tighter">ROMA vs AC MILAN</p>
-                    <p class="text-zinc-300 text-[10px] font-sync mt-1 uppercase tracking-widest bg-black/40 inline-block px-2">Stadio Olimpico | Serie A Round 22</p>
-                </div>
-                <div class="flex items-center gap-8 bg-black/60 backdrop-blur-md p-4 rounded-2xl border border-white/10">
-                    <div class="text-center">
-                        <p class="text-[9px] font-sync text-zinc-400 uppercase">Date</p>
-                        <p class="text-xl font-bold">JAN 25</p>
-                    </div>
-                    <div class="w-px h-10 bg-white/20"></div>
-                    <div class="text-center">
-                        <p class="text-[9px] font-sync text-zinc-400 uppercase">Kick-off</p>
-                        <p class="text-xl font-bold">20:45</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-gradient-to-r from-red-900/40 to-transparent p-6 rounded-2xl border-l-4 border-red-600 backdrop-blur-sm">
-                <p class="text-[9px] font-sync text-red-500 mb-2 uppercase tracking-widest">Confirmed Seating</p>
-                <h4 class="text-2xl font-black uppercase tracking-tight">Tribuna Tevere Top Nord</h4>
-                <p class="text-xs text-zinc-300 mt-1 uppercase tracking-tighter italic">Premium side view - Prime visibility of the carnage</p>
-            </div>
-        </div>
-
-        <div class="lg:w-80 bg-black/60 backdrop-blur-xl rounded-3xl p-6 border border-white/10">
-            <h4 class="text-[10px] font-sync text-zinc-400 mb-4 uppercase tracking-widest flex items-center gap-2">
-                <svg class="w-3 h-3 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
-                Transit to Stadium
-            </h4>
-            <ul class="space-y-4 text-[10px] font-sync uppercase leading-tight">
-                <li class="flex gap-3">
-                    <span class="text-red-500">01</span>
-                    <p><span class="text-white">Metro A:</span> Head to <span class="text-white">Ottaviano</span> station.</p>
-                </li>
-                <li class="flex gap-3">
-                    <span class="text-red-500">02</span>
-                    <p><span class="text-white">Bus 32:</span> From Ottaviano to <span class="text-white">Piazzale della Farnesina</span>.</p>
-                </li>
-                <li class="flex gap-3">
-                    <span class="text-red-500">03</span>
-                    <p><span class="text-white">Tram 2:</span> From Flaminio to <span class="text-white">Piazza Mancini</span>.</p>
-                </li>
-                <li class="pt-2 border-t border-white/10 text-[8px] text-zinc-500 tracking-tighter">
-                    Note: Match traffic is heavy. Allow 60 mins for extraction.
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<br>
-<div class="md:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-5">
-    
-<div class="glass-panel p-8 rounded-[2.5rem] flex flex-col justify-between border-green-500/30 relative overflow-hidden group h-full">
-    <div class="absolute inset-0 opacity-10 pointer-events-none">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full border border-green-500 rounded-full animate-ping" style="animation-duration: 4s;"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(34,197,94,0.1),transparent_70%)]"></div>
-    </div>
-
-    <div class="relative z-10 h-full flex flex-col">
-        <div class="flex justify-between items-start mb-6">
-            <h3 class="text-[10px] font-sync text-green-500 uppercase tracking-[0.3em] flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                Strategic Hydration: Irish Sector
-            </h3>
-            <span class="text-[8px] font-sync text-zinc-500 border border-white/10 px-2 py-1 rounded tracking-tighter uppercase">Guinness Quality: Verified</span>
-        </div>
-
-        <div class="flex flex-wrap items-end gap-6 mb-8">
-            <div>
-                <div class="flex items-baseline gap-2">
-                    <span class="text-7xl font-black font-sync tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-green-500">08</span>
-                    <span class="text-zinc-500 font-sync text-[12px] uppercase pb-2 tracking-widest">Targets</span>
-                </div>
-            </div>
-            
-            <div class="bg-green-500/5 border border-green-500/20 p-3 rounded-xl flex-1 min-w-[140px]">
-                <p class="text-[8px] font-sync text-green-400 uppercase mb-2">Pint Protocol</p>
-                <ul class="text-[9px] font-sync text-zinc-400 space-y-1 uppercase tracking-tighter">
-                    <li class="flex items-center gap-2"><span class="w-1 h-1 bg-green-500 rounded-full"></span> Hydrate between units</li>
-                    <li class="flex items-center gap-2"><span class="w-1 h-1 bg-green-500 rounded-full"></span> Local Peroni backup</li>
-                    <li class="flex items-center gap-2"><span class="w-1 h-1 bg-green-500 rounded-full"></span> Scholars Lounge Base</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-3 flex-grow">
-            <a href="https://www.scholarsloungerome.com/" target="_blank" class="flex flex-col justify-center p-3 bg-white/5 rounded-xl border border-white/5 hover:border-green-500/50 hover:bg-green-500/10 transition-all group/btn">
-                <p class="font-black text-[10px] uppercase font-sync text-white group-hover/btn:text-green-400">Scholars Lounge</p>
-                <p class="text-[7px] font-sync text-zinc-500 uppercase mt-1">Primary Base</p>
-            </a>
-            <a href="https://www.finneganpub.com/" target="_blank" class="flex flex-col justify-center p-3 bg-white/5 rounded-xl border border-white/5 hover:border-green-500/50 hover:bg-green-500/10 transition-all group/btn">
-                <p class="font-black text-[10px] uppercase font-sync text-white group-hover/btn:text-green-400">Finnegan's</p>
-                <p class="text-[7px] font-sync text-zinc-500 uppercase mt-1">Monti District</p>
-            </a>
-            <a href="https://www.abbey-rome.com/" target="_blank" class="flex flex-col justify-center p-3 bg-white/5 rounded-xl border border-white/5 hover:border-green-500/50 hover:bg-green-500/10 transition-all group/btn">
-                <p class="font-black text-[10px] uppercase font-sync text-white group-hover/btn:text-green-400">Abbey Theatre</p>
-                <p class="text-[7px] font-sync text-zinc-500 uppercase mt-1">Navona Area</p>
-            </a>
-            <a href="https://www.shamrockpubroma.it/" target="_blank" class="flex flex-col justify-center p-3 bg-white/5 rounded-xl border border-white/5 hover:border-green-500/50 hover:bg-green-500/10 transition-all group/btn">
-                <p class="font-black text-[10px] uppercase font-sync text-white group-hover/btn:text-green-400">The Shamrock</p>
-                <p class="text-[7px] font-sync text-zinc-500 uppercase mt-1">Colosseum Ops</p>
-            </a>
-            <a href="#" class="flex flex-col justify-center p-3 bg-white/5 rounded-xl border border-white/5 hover:border-green-500/50 hover:bg-green-500/10 transition-all group/btn">
-                <p class="font-black text-[10px] uppercase font-sync text-white group-hover/btn:text-green-400">Druid's Den</p>
-                <p class="text-[7px] font-sync text-zinc-500 uppercase mt-1">Cavour Sector</p>
-            </a>
-            <a href="#" class="flex flex-col justify-center p-3 bg-white/5 rounded-xl border border-white/5 hover:border-green-500/50 hover:bg-green-500/10 transition-all group/btn">
-                <p class="font-black text-[10px] uppercase font-sync text-white group-hover/btn:text-green-400">The Highlander</p>
-                <p class="text-[7px] font-sync text-zinc-500 uppercase mt-1">Centro Storico</p>
-            </a>
-        </div>
-
-        <div class="mt-6 flex justify-between items-center text-[9px] font-sync text-zinc-500 uppercase tracking-widest bg-black/40 p-3 rounded-lg border border-white/5">
-            <div class="flex items-center gap-4">
-                <span class="text-green-500">Taps: Open</span>
-                <span class="w-px h-3 bg-zinc-800"></span>
-                <span>Matches: On Screen</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-                <span class="animate-pulse italic">Live Recon</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="glass-panel p-8 rounded-[2.5rem] border-blue-500/30 relative overflow-hidden group h-full">
-    <div class="absolute inset-0 opacity-20 pointer-events-none">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)] animate-pulse"></div>
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent -translate-y-full group-hover:animate-[scan_3s_linear_infinite]"></div>
-    </div>
-
-    <div class="relative z-10">
-        <div class="flex justify-between items-start mb-6">
-            <h3 class="text-[10px] font-sync text-blue-400 uppercase tracking-[0.3em] flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-                Environmental Intel: Sector Rome
-            </h3>
-            <span class="text-[8px] font-sync text-zinc-500 border border-white/10 px-2 py-1 rounded">EXTRACT: JAN 23-26</span>
-        </div>
-
-        <div class="flex flex-wrap items-end gap-6 mb-8">
-            <div>
-                <div class="flex items-baseline gap-2">
-                    <span class="text-7xl font-black font-sync tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-blue-400">12°C</span>
-                    <span class="text-zinc-500 font-sync text-[12px] uppercase pb-2 tracking-widest">Avg Temp</span>
-                </div>
-                <p class="text-[10px] text-blue-300 font-sync uppercase tracking-tighter">Conditions: Moderate / Overcast</p>
-            </div>
-            
-            <div class="bg-blue-500/5 border border-blue-500/20 p-3 rounded-xl flex-1 min-w-[140px]">
-                <p class="text-[8px] font-sync text-blue-400 uppercase mb-2">Tactical Apparel</p>
-                <ul class="text-[9px] font-sync text-zinc-400 space-y-1 uppercase tracking-tighter">
-                    <li class="flex items-center gap-2"><span class="w-1 h-1 bg-blue-500 rounded-full"></span> Mid-weight Shell</li>
-                    <li class="flex items-center gap-2"><span class="w-1 h-1 bg-blue-500 rounded-full"></span> Scarf (Stadio Wind)</li>
-                    <li class="flex items-center gap-2"><span class="w-1 h-1 bg-blue-500 rounded-full"></span> Water-resistant Footwear</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-4 gap-2 border-t border-white/5 pt-6">
-            <div class="text-center group-hover:bg-white/5 p-2 rounded-xl transition-colors">
-                <p class="text-[8px] font-sync text-zinc-500 mb-2">FRI 23</p>
-                <p class="text-[12px] font-black font-sync">13°/3°</p>
-                <div class="mt-2 text-[7px] text-zinc-400 uppercase font-sync">Arrival</div>
-            </div>
-            <div class="text-center group-hover:bg-white/5 p-2 rounded-xl transition-colors">
-                <p class="text-[8px] font-sync text-zinc-500 mb-2">SAT 24</p>
-                <p class="text-[12px] font-black font-sync">12°/4°</p>
-                <div class="mt-2 text-[7px] text-zinc-400 uppercase font-sync">Cloudy</div>
-            </div>
-            <div class="text-center group-hover:bg-white/5 p-2 rounded-xl transition-colors border border-blue-500/30 bg-blue-500/10">
-                <p class="text-[8px] font-sync text-blue-400 mb-2">SUN 25</p>
-                <p class="text-[12px] font-black font-sync">11°/3°</p>
-                <div class="mt-2 text-[7px] text-blue-400 uppercase font-sync font-bold">Match Day</div>
-            </div>
-            <div class="text-center group-hover:bg-white/5 p-2 rounded-xl transition-colors">
-                <p class="text-[8px] font-sync text-zinc-500 mb-2">MON 26</p>
-                <p class="text-[12px] font-black font-sync">13°/5°</p>
-                <div class="mt-2 text-[7px] text-zinc-400 uppercase font-sync">Extract</div>
-            </div>
-        </div>
-
-        <div class="mt-6 flex justify-between items-center text-[9px] font-sync text-zinc-500 uppercase tracking-widest bg-black/40 p-3 rounded-lg border border-white/5">
-            <div class="flex items-center gap-4">
-                <span>Rain: 18%</span>
-                <span class="w-px h-3 bg-zinc-800"></span>
-                <span>Humidity: 65%</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
-                <span>UV: Low</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<style>
-@keyframes scan {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(800%); }
-}
-</style>
-
-    <div class="glass-panel p-8 rounded-[2.5rem] border-white/10 flex flex-col justify-center">
-        <div class="space-y-8">
-            <div>
-                <h3 class="text-[10px] font-sync text-green-500 mb-4 uppercase tracking-[0.3em]">Deployment (DUB → FCO)</h3>
-                <div class="flex justify-between items-center">
-                    <div>
-                        <p class="text-2xl font-black font-sync">06:25</p>
-                        <p class="text-[9px] text-zinc-500 font-sync uppercase">FRI 23 JAN</p>
-                    </div>
-                    <div class="flex-1 px-4 flex items-center justify-center">
-                        <div class="h-px w-full bg-zinc-800 relative">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <svg class="w-4 h-4 text-green-500 rotate-90" fill="currentColor" viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-right">
-                        <p class="text-2xl font-black font-sync">10:40</p>
-                        <p class="text-[9px] text-zinc-500 font-sync tracking-tighter uppercase">EI 0402 | CONFIRMED</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h3 class="text-[10px] font-sync text-amber-500 mb-4 uppercase tracking-[0.3em]">Extraction (FCO → DUB)</h3>
-                <div class="flex justify-between items-center">
-                    <div>
-                        <p class="text-2xl font-black font-sync">11:20</p>
-                        <p class="text-[9px] text-zinc-500 font-sync uppercase">MON 26 JAN</p>
-                    </div>
-                    <div class="flex-1 px-4 flex items-center justify-center">
-                        <div class="h-px w-full bg-zinc-800 relative">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <svg class="w-4 h-4 text-amber-500 -rotate-90" fill="currentColor" viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-right">
-                        <p class="text-2xl font-black font-sync">13:35</p>
-                        <p class="text-[9px] text-zinc-500 font-sync tracking-tighter uppercase">EI 0403 | CONFIRMED</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="glass-panel p-8 rounded-[2.5rem] relative overflow-hidden border-white/10 group">
-        <div class="absolute inset-0 opacity-10 grayscale group-hover:opacity-20 transition-opacity pointer-events-none" 
-             style="background-image: url('https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=800'); background-size: cover; background-position: center;"></div>
-        
-        <div class="relative z-10 h-full flex flex-col justify-between">
-            <div class="flex justify-between items-start gap-4">
                 <div>
-                    <h3 class="text-[10px] font-sync text-amber-500 mb-3 uppercase tracking-[0.3em]">Base of Operations</h3>
-                    <h2 class="text-4xl font-black uppercase font-sync leading-none tracking-tighter">Hotel Quirinale</h2>
-                    <p class="text-[10px] text-zinc-400 mt-3 font-sync tracking-[0.1em] uppercase">Via Nazionale, 7 - 00184 Rome</p>
+                    <p class="text-[9px] font-sync text-red-500 mb-1 uppercase tracking-widest">Official Tour Anthem</p>
+                    <h4 class="font-black text-xl tracking-tighter uppercase italic">Evan Ferguson Mini Bus Hore (Hamburg Mix)</h4>
                 </div>
-                <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-4 rounded-2xl text-center min-w-[100px]">
-                    <p class="text-[9px] font-sync text-zinc-500 uppercase mb-1">Check-In</p>
-                    <p class="text-xl font-bold font-sync">14:30</p>
+            </div>
+            <div class="mt-4 md:mt-0 px-8 py-3 bg-white/10 hover:bg-white hover:text-black rounded-full text-[10px] font-sync transition-all uppercase tracking-widest border border-white/10">
+                Play Anthem
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Match Day Banner: HSV vs Eintracht Frankfurt -->
+        <div class="md:col-span-12 glass-panel rounded-[2.5rem] border-blue-500/30 relative overflow-hidden group">
+            <div class="absolute inset-0 z-0 transition-transform duration-700 group-hover:scale-105" 
+                 style="background: linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.92) 100%), 
+                        url('hero.png'); 
+                        background-size: cover; 
+                        background-position: center;">
+            </div>
+
+            <div class="relative z-10 p-8 flex flex-col lg:flex-row justify-between gap-10">
+                <div class="flex-1">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
+                        <div class="text-center md:text-left">
+                            <h3 class="text-[10px] font-sync text-blue-400 mb-2 uppercase tracking-[0.3em]">Main Event: Match Day</h3>
+                            <p class="text-4xl md:text-5xl font-black uppercase tracking-tighter">HAMBURGER SV vs EINTRACHT FRANKFURT</p>
+                            <p class="text-zinc-300 text-[10px] font-sync mt-1 uppercase tracking-widest bg-black/50 inline-block px-3 py-1 rounded-md border border-white/10">Volksparkstadion | Bundesliga</p>
+                        </div>
+                        <div class="flex items-center gap-8 bg-black/70 backdrop-blur-md p-4 rounded-2xl border border-white/10">
+                            <div class="text-center">
+                                <p class="text-[9px] font-sync text-zinc-400 uppercase">Date</p>
+                                <p class="text-xl font-bold text-amber-500">MAR 06/07</p>
+                            </div>
+                            <div class="w-px h-10 bg-white/20"></div>
+                            <div class="text-center">
+                                <p class="text-[9px] font-sync text-zinc-400 uppercase">Kick-off</p>
+                                <p class="text-xl font-bold">TBC</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-blue-900/40 to-transparent p-6 rounded-2xl border-l-4 border-blue-500 backdrop-blur-sm">
+                        <p class="text-[9px] font-sync text-blue-400 mb-2 uppercase tracking-widest">Ground Intel</p>
+                        <h4 class="text-2xl font-black uppercase tracking-tight">Volksparkstadion Experience</h4>
+                        <p class="text-xs text-zinc-300 mt-1 uppercase tracking-tighter italic">Home end atmosphere & pre-match Holsten beers in Altona/St. Pauli</p>
+                    </div>
+                </div>
+
+                <div class="lg:w-80 bg-black/70 backdrop-blur-xl rounded-3xl p-6 border border-white/10">
+                    <h4 class="text-[10px] font-sync text-zinc-400 mb-4 uppercase tracking-widest flex items-center gap-2">
+                        <svg class="w-3 h-3 text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                        Transit to Volksparkstadion
+                    </h4>
+                    <ul class="space-y-4 text-[10px] font-sync uppercase leading-tight">
+                        <li class="flex gap-3">
+                            <span class="text-blue-400">01</span>
+                            <p><span class="text-white">S-Bahn S3/S5:</span> From Feldstraße / St. Pauli to <span class="text-white">Stellingen</span> station.</p>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-blue-400">02</span>
+                            <p><span class="text-white">Shuttle Bus:</span> Direct matchday shuttle from Stellingen to stadium gates.</p>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-blue-400">03</span>
+                            <p><span class="text-white">Walk Option:</span> 15 min fan march from S-Bahn Othmarschen.</p>
+                        </li>
+                        <li class="pt-2 border-t border-white/10 text-[8px] text-zinc-500 tracking-tighter">
+                            Note: Heavy fan traffic. Depart hotel 90 mins before kick-off.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Hydration & Weather Grid -->
+        <div class="md:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-5">
+            
+            <!-- Irish Sector & German Pub Hydration -->
+            <div class="glass-panel p-8 rounded-[2.5rem] flex flex-col justify-between border-emerald-500/30 relative overflow-hidden group h-full">
+                <div class="absolute inset-0 opacity-10 pointer-events-none">
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full border border-emerald-500 rounded-full animate-ping" style="animation-duration: 4s;"></div>
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(16,185,129,0.1),transparent_70%)]"></div>
+                </div>
+
+                <div class="relative z-10 h-full flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-[10px] font-sync text-emerald-400 uppercase tracking-[0.3em] flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            Strategic Hydration: Hamburg Sector
+                        </h3>
+                        <span class="text-[8px] font-sync text-zinc-500 border border-white/10 px-2 py-1 rounded tracking-tighter uppercase">Pint Protocol: Active</span>
+                    </div>
+
+                    <div class="flex flex-wrap items-end gap-6 mb-8">
+                        <div>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-7xl font-black font-sync tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-emerald-400">08</span>
+                                <span class="text-zinc-500 font-sync text-[12px] uppercase pb-2 tracking-widest">Bases</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-emerald-500/5 border border-emerald-500/20 p-3 rounded-xl flex-1 min-w-[140px]">
+                            <p class="text-[8px] font-sync text-emerald-400 uppercase mb-2">Rations & Drafts</p>
+                            <ul class="text-[9px] font-sync text-zinc-400 space-y-1 uppercase tracking-tighter">
+                                <li class="flex items-center gap-2"><span class="w-1 h-1 bg-emerald-400 rounded-full"></span> Guinness & Astra Kiez-Dose</li>
+                                <li class="flex items-center gap-2"><span class="w-1 h-1 bg-emerald-400 rounded-full"></span> Fleetenkieker Irish Pub Base</li>
+                                <li class="flex items-center gap-2"><span class="w-1 h-1 bg-emerald-400 rounded-full"></span> Sternschanze Craft Breweries</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3 flex-grow">
+                        <a href="#" target="_blank" class="flex flex-col justify-center p-3 bg-white/5 rounded-xl border border-white/5 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all group/btn">
+                            <p class="font-black text-[10px] uppercase font-sync text-white group-hover/btn:text-emerald-400">Fleetenkieker</p>
+                            <p class="text-[7px] font-sync text-zinc-500 uppercase mt-1">Altstadt Irish Base</p>
+                        </a>
+                        <a href="#" target="_blank" class="flex flex-col justify-center p-3 bg-white/5 rounded-xl border border-white/5 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all group/btn">
+                            <p class="font-black text-[10px] uppercase font-sync text-white group-hover/btn:text-emerald-400">Shamrock Irish Pub</p>
+                            <p class="text-[7px] font-sync text-zinc-500 uppercase mt-1">Feldstraße Sector</p>
+                        </a>
+                        <a href="#" target="_blank" class="flex flex-col justify-center p-3 bg-white/5 rounded-xl border border-white/5 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all group/btn">
+                            <p class="font-black text-[10px] uppercase font-sync text-white group-hover/btn:text-emerald-400">Paddy's Bar</p>
+                            <p class="text-[7px] font-sync text-zinc-500 uppercase mt-1">Rathaus District</p>
+                        </a>
+                        <a href="#" target="_blank" class="flex flex-col justify-center p-3 bg-white/5 rounded-xl border border-white/5 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all group/btn">
+                            <p class="font-black text-[10px] uppercase font-sync text-white group-hover/btn:text-emerald-400">Molly Malone</p>
+                            <p class="text-[7px] font-sync text-zinc-500 uppercase mt-1">Reeperbahn Ops</p>
+                        </a>
+                        <a href="#" class="flex flex-col justify-center p-3 bg-white/5 rounded-xl border border-white/5 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all group/btn">
+                            <p class="font-black text-[10px] uppercase font-sync text-white group-hover/btn:text-emerald-400">Ratsherrn Braueck</p>
+                            <p class="text-[7px] font-sync text-zinc-500 uppercase mt-1">Schanzenviertel</p>
+                        </a>
+                        <a href="#" class="flex flex-col justify-center p-3 bg-white/5 rounded-xl border border-white/5 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all group/btn">
+                            <p class="font-black text-[10px] uppercase font-sync text-white group-hover/btn:text-emerald-400">Elbschlosskeller</p>
+                            <p class="text-[7px] font-sync text-zinc-500 uppercase mt-1">Late Night Survival</p>
+                        </a>
+                    </div>
+
+                    <div class="mt-6 flex justify-between items-center text-[9px] font-sync text-zinc-500 uppercase tracking-widest bg-black/40 p-3 rounded-lg border border-white/5">
+                        <div class="flex items-center gap-4">
+                            <span class="text-emerald-400">Taps: Open</span>
+                            <span class="w-px h-3 bg-zinc-800"></span>
+                            <span>Astra / Holsten: Cold</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                            <span class="animate-pulse italic">Recon On-Going</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="mt-8">
-                <a href="https://www.hotelquirinale.it/en/index" target="_blank" 
-                   class="inline-block w-full px-10 py-4 bg-white text-black text-[10px] font-black font-sync uppercase rounded-full hover:bg-amber-500 hover:text-white transition-all text-center">
-                    Secure Perimeter
+            <!-- Weather Intel -->
+            <div class="glass-panel p-8 rounded-[2.5rem] border-sky-500/30 relative overflow-hidden group h-full">
+                <div class="absolute inset-0 opacity-20 pointer-events-none">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_70%)] animate-pulse"></div>
+                </div>
+
+                <div class="relative z-10">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-[10px] font-sync text-sky-400 uppercase tracking-[0.3em] flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                            Environmental Intel: Sector Hamburg
+                        </h3>
+                        <span class="text-[8px] font-sync text-zinc-500 border border-white/10 px-2 py-1 rounded">MARCH 05-08</span>
+                    </div>
+
+                    <div class="flex flex-wrap items-end gap-6 mb-8">
+                        <div>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-7xl font-black font-sync tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-sky-400">8°C</span>
+                                <span class="text-zinc-500 font-sync text-[12px] uppercase pb-2 tracking-widest">Avg Temp</span>
+                            </div>
+                            <p class="text-[10px] text-sky-300 font-sync uppercase tracking-tighter">Conditions: Cool / Northern Breeze</p>
+                        </div>
+                        
+                        <div class="bg-sky-500/5 border border-sky-500/20 p-3 rounded-xl flex-1 min-w-[140px]">
+                            <p class="text-[8px] font-sync text-sky-400 uppercase mb-2">Recommended Gear</p>
+                            <ul class="text-[9px] font-sync text-zinc-400 space-y-1 uppercase tracking-tighter">
+                                <li class="flex items-center gap-2"><span class="w-1 h-1 bg-sky-400 rounded-full"></span> Heavy Jacket / Parka</li>
+                                <li class="flex items-center gap-2"><span class="w-1 h-1 bg-sky-400 rounded-full"></span> Waterproof Layer</li>
+                                <li class="flex items-center gap-2"><span class="w-1 h-1 bg-sky-400 rounded-full"></span> Sturdy Marching Boots</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-4 gap-2 border-t border-white/5 pt-6">
+                        <div class="text-center group-hover:bg-white/5 p-2 rounded-xl transition-colors">
+                            <p class="text-[8px] font-sync text-zinc-500 mb-2">FRI 05</p>
+                            <p class="text-[12px] font-black font-sync">9°/2°</p>
+                            <div class="mt-2 text-[7px] text-zinc-400 uppercase font-sync">Inbound</div>
+                        </div>
+                        <div class="text-center group-hover:bg-white/5 p-2 rounded-xl transition-colors border border-sky-500/30 bg-sky-500/10">
+                            <p class="text-[8px] font-sync text-sky-400 mb-2">SAT 06</p>
+                            <p class="text-[12px] font-black font-sync">8°/1°</p>
+                            <div class="mt-2 text-[7px] text-sky-400 uppercase font-sync font-bold">Matchday</div>
+                        </div>
+                        <div class="text-center group-hover:bg-white/5 p-2 rounded-xl transition-colors">
+                            <p class="text-[8px] font-sync text-zinc-500 mb-2">SUN 07</p>
+                            <p class="text-[12px] font-black font-sync">7°/2°</p>
+                            <div class="mt-2 text-[7px] text-zinc-400 uppercase font-sync">Reeperbahn</div>
+                        </div>
+                        <div class="text-center group-hover:bg-white/5 p-2 rounded-xl transition-colors">
+                            <p class="text-[8px] font-sync text-zinc-500 mb-2">MON 08</p>
+                            <p class="text-[12px] font-black font-sync">9°/3°</p>
+                            <div class="mt-2 text-[7px] text-zinc-400 uppercase font-sync">Outbound</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex justify-between items-center text-[9px] font-sync text-zinc-500 uppercase tracking-widest bg-black/40 p-3 rounded-lg border border-white/5">
+                        <div class="flex items-center gap-4">
+                            <span>Rain: 30%</span>
+                            <span class="w-px h-3 bg-zinc-800"></span>
+                            <span>Humidity: 72%</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                            <span>Wind: 18 km/h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flights Block (Updated FR5043 & FR5044) -->
+            <div class="glass-panel p-8 rounded-[2.5rem] border-white/10 flex flex-col justify-center">
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-[10px] font-sync text-red-500 mb-4 uppercase tracking-[0.3em]">Deployment (DUB → HAM)</h3>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-2xl font-black font-sync">07:15</p>
+                                <p class="text-[9px] text-zinc-500 font-sync uppercase">FRI 05 MAR 2027</p>
+                            </div>
+                            <div class="flex-1 px-4 flex items-center justify-center">
+                                <div class="h-px w-full bg-zinc-800 relative">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-red-500 rotate-90" fill="currentColor" viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-2xl font-black font-sync">10:10</p>
+                                <p class="text-[9px] text-zinc-500 font-sync tracking-tighter uppercase">FR 5043 | PNR: OB87VE</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-[10px] font-sync text-amber-500 mb-4 uppercase tracking-[0.3em]">Extraction (HAM → DUB)</h3>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-2xl font-black font-sync">16:40</p>
+                                <p class="text-[9px] font-sync text-zinc-500 font-sync uppercase">MON 08 MAR 2027</p>
+                            </div>
+                            <div class="flex-1 px-4 flex items-center justify-center">
+                                <div class="h-px w-full bg-zinc-800 relative">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-amber-500 -rotate-90" fill="currentColor" viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-2xl font-black font-sync">17:45</p>
+                                <p class="text-[9px] text-zinc-500 font-sync tracking-tighter uppercase">FR 5044 | CONFIRMED</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel Base of Operations Block (NH Collection Hamburg City) -->
+            <div class="glass-panel p-8 rounded-[2.5rem] relative overflow-hidden border-white/10 group">
+                <div class="absolute inset-0 opacity-15 grayscale group-hover:opacity-25 transition-opacity pointer-events-none" 
+                     style="background-image: url('hero.png'); background-size: cover; background-position: center;"></div>
+                
+                <div class="relative z-10 h-full flex flex-col justify-between">
+                    <div class="flex justify-between items-start gap-4">
+                        <div>
+                            <h3 class="text-[10px] font-sync text-amber-500 mb-3 uppercase tracking-[0.3em]">Base of Operations</h3>
+                            <h2 class="text-3xl font-black uppercase font-sync leading-none tracking-tighter">NH Collection Hamburg City</h2>
+                            <p class="text-[10px] text-zinc-400 mt-3 font-sync tracking-[0.1em] uppercase">Feldstraße 53-58, 20357 Hamburg</p>
+                        </div>
+                        <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-4 rounded-2xl text-center min-w-[100px]">
+                            <p class="text-[9px] font-sync text-zinc-500 uppercase mb-1">Check-In</p>
+                            <p class="text-xl font-bold font-sync">15:00</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="https://www.nh-hotels.com/en/hotel/nh-collection-hamburg-city" target="_blank" 
+                           class="inline-block w-full px-10 py-4 bg-white text-black text-[10px] font-black font-sync uppercase rounded-full hover:bg-amber-500 hover:text-white transition-all text-center">
+                            View Hotel Base
+                        </a>
+                        <div class="flex items-center gap-2 mt-4">
+                            <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <span class="text-[8px] font-sync text-zinc-500 uppercase tracking-widest">Heiligengeistfeld / St. Pauli District</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+
+        <!-- Transit & Extraction Route -->
+        <div class="glass-panel p-8 rounded-[2.5rem] border-white/20 relative overflow-hidden">
+            <h3 class="text-[10px] font-sync text-amber-500 mb-6 uppercase tracking-[0.3em] flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A2 2 0 013 15.382V6.418a2 2 0 011.106-1.789L9 2l5.447 2.724A2 2 0 0115 6.618v8.964a2 2 0 01-1.106 1.789L9 20z"/></svg>
+                Extraction Route: Hamburg Airport (HAM) to Hotel
+            </h3>
+            <div class="space-y-4">
+                <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                    <p class="text-[9px] font-sync text-zinc-500 mb-1 uppercase tracking-widest">Primary Option: S-Bahn S1</p>
+                    <p class="font-bold text-xs uppercase tracking-tight">S1 Rail Direct to Berliner Tor / Hauptbahnhof</p>
+                    <p class="text-[9px] font-sync text-zinc-400 mt-1 uppercase">25 Mins | Transfer to U3 Underground line to Feldstraße (Right outside NH Collection Hotel).</p>
+                </div>
+                <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                    <p class="text-[9px] font-sync text-zinc-500 mb-1 uppercase tracking-widest">Secondary Option: Direct Taxi / Uber</p>
+                    <p class="font-bold text-xs uppercase tracking-tight">Official Airport Taxi Stand</p>
+                    <p class="text-[9px] font-sync text-zinc-400 mt-1 uppercase">Approx €35–€45 | 25 min drive depending on inner-city traffic.</p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Field Intelligence Objectives (Hamburg 40 Objectives) -->
+        <div class="md:col-span-12 glass-panel p-8 rounded-[2.5rem] border-white/10 relative overflow-hidden">
+            <div class="mb-10 text-center md:text-left">
+                <h3 class="text-[10px] font-sync text-amber-500 mb-2 uppercase tracking-[0.3em]">Field Intelligence: 40 Objectives</h3>
+                <p class="text-4xl font-black uppercase tracking-tighter">THE GERMAN EXPEDITION</p>
+                <p class="text-zinc-500 text-[10px] font-sync mt-1 uppercase tracking-widest">Complete Hamburg Reconnaissance & Targets</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <div class="space-y-4">
+                    <h4 class="text-red-500 font-sync text-[10px] uppercase tracking-wider border-b border-red-500/20 pb-2">Zone 01: Maritime & Historic Sector</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-[11px] font-sync uppercase text-zinc-300">
+                        <div class="flex gap-2"><span class="text-white">01</span> Elbphilharmonie Plaza</div>
+                        <div class="flex gap-2"><span class="text-white">02</span> Speicherstadt Canals</div>
+                        <div class="flex gap-2"><span class="text-white">03</span> Landungsbrücken Piers</div>
+                        <div class="flex gap-2"><span class="text-white">04</span> St. Michael's Church Tower</div>
+                        <div class="flex gap-2"><span class="text-white">05</span> Old Elbe Tunnel Walk</div>
+                        <div class="flex gap-2"><span class="text-white">06</span> Fischmarkt Pier</div>
+                        <div class="flex gap-2"><span class="text-white">07</span> Chilehaus Architecture</div>
+                        <div class="flex gap-2"><span class="text-white">08</span> Miniatur Wunderland</div>
+                        <div class="flex gap-2"><span class="text-white">09</span> Rathausmarkt Square</div>
+                        <div class="flex gap-2"><span class="text-white">10</span> HafenCity Promenade</div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-amber-500 font-sync text-[10px] uppercase tracking-wider border-b border-amber-500/20 pb-2">Zone 02: Football & Cultural Grounds</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-[11px] font-sync uppercase text-zinc-300">
+                        <div class="flex gap-2"><span class="text-white">11</span> Volksparkstadion (HSV)</div>
+                        <div class="flex gap-2"><span class="text-white">12</span> Millerntor-Stadion</div>
+                        <div class="flex gap-2"><span class="text-white">13</span> St. Pauli Clubhouse</div>
+                        <div class="flex gap-2"><span class="text-white">14</span> Beatles-Platz Monument</div>
+                        <div class="flex gap-2"><span class="text-white">15</span> Panoptikum Wax Museum</div>
+                        <div class="flex gap-2"><span class="text-white">16</span> Planten un Blomen Park</div>
+                        <div class="flex gap-2"><span class="text-white">17</span> Alster Lake Walkway</div>
+                        <div class="flex gap-2"><span class="text-white">18</span> Feldstraßen Bunker</div>
+                        <div class="flex gap-2"><span class="text-white">19</span> Kunsthalle Museum</div>
+                        <div class="flex gap-2"><span class="text-white">20</span> Deichtorhallen Art Gallery</div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-emerald-500 font-sync text-[10px] uppercase tracking-wider border-b border-emerald-500/20 pb-2">Zone 03: Rations & Bavarian Beer Halls</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-[11px] font-sync uppercase text-zinc-300">
+                        <div class="flex gap-2"><span class="text-white">21</span> Hofbräu Wirtshaus Speersort</div>
+                        <div class="flex gap-2"><span class="text-white">22</span> Gröninger Privatbrauerei</div>
+                        <div class="flex gap-2"><span class="text-white">23</span> Fischbrötchen at Harbour</div>
+                        <div class="flex gap-2"><span class="text-white">24</span> Currywurst at Mö-Grill</div>
+                        <div class="flex gap-2"><span class="text-white">25</span> Schanzenhöfe Craft Beer</div>
+                        <div class="flex gap-2"><span class="text-white">26</span> Block Bräu Harbour Deck</div>
+                        <div class="flex gap-2"><span class="text-white">27</span> ÜberQuell Pizza & Brew</div>
+                        <div class="flex gap-2"><span class="text-white">28</span> Old Commercial Room</div>
+                        <div class="flex gap-2"><span class="text-white">29</span> Alsterhaus Food Hall</div>
+                        <div class="flex gap-2"><span class="text-white">30</span> Bullerei Steakhouse</div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-blue-500 font-sync text-[10px] uppercase tracking-wider border-b border-blue-500/20 pb-2">Zone 04: Night Operations & Bars</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-[11px] font-sync uppercase text-zinc-300">
+                        <div class="flex gap-2"><span class="text-white">31</span> Reeperbahn Main Strip</div>
+                        <div class="flex gap-2"><span class="text-white">32</span> Hans-Albers-Platz</div>
+                        <div class="flex gap-2"><span class="text-white">33</span> Große Freiheit Club Row</div>
+                        <div class="flex gap-2"><span class="text-white">34</span> Sternschanze Night Crawl</div>
+                        <div class="flex gap-2"><span class="text-white">35</span> Zum Silbersack (Legendary)</div>
+                        <div class="flex gap-2"><span class="text-white">36</span> Clockers Gin Speakeasy</div>
+                        <div class="flex gap-2"><span class="text-white">37</span> Drip Bar Cocktails</div>
+                        <div class="flex gap-2"><span class="text-white">38</span> 20Up Skyline Lounge</div>
+                        <div class="flex gap-2"><span class="text-white">39</span> Grosse Freiheit 36</div>
+                        <div class="flex gap-2"><span class="text-white">40</span> Mojo Club Underground</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Yearly Expeditions Archive Section -->
+        <div class="mt-16 glass-panel p-8 rounded-[2.5rem] border-amber-500/20 text-center">
+            <h3 class="text-[10px] font-sync text-amber-500 mb-3 uppercase tracking-[0.3em]">Yearly Expeditions Archive</h3>
+            <p class="text-zinc-400 text-xs font-sync mb-6 uppercase">Relive past missions and look back through the years</p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <a href="https://kevinrome.vip/kevinrome2026.html" class="px-6 py-3 bg-white/5 hover:bg-amber-500 hover:text-black rounded-full font-sync text-[10px] uppercase tracking-wider transition-all border border-white/10">
+                    🇮🇹 Rome 2026 (Kev In Rome)
                 </a>
-                <div class="flex items-center gap-2 mt-4">
-                    <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                    <span class="text-[8px] font-sync text-zinc-500 uppercase tracking-widest">20 Min March to Colosseum</span>
-                </div>
+                <span class="px-6 py-3 bg-red-600/20 text-red-400 rounded-full font-sync text-[10px] uppercase tracking-wider border border-red-500/30">
+                    🇩🇪 Hamburg 2027 (Current)
+                </span>
             </div>
         </div>
-    </div>
-
-</div>
-<br>
-    <div class="glass-panel p-8 rounded-[2.5rem] border-white/20 relative overflow-hidden">
-        <h3 class="text-[10px] font-sync text-amber-500 mb-6 uppercase tracking-[0.3em] flex items-center gap-2">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A2 2 0 013 15.382V6.418a2 2 0 011.106-1.789L9 2l5.447 2.724A2 2 0 0115 6.618v8.964a2 2 0 01-1.106 1.789L9 20z"/></svg>
-            Extraction Route: Rome Airport to Base
-        </h3>
-        <div class="space-y-4">
-            <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
-                <p class="text-[9px] font-sync text-zinc-500 mb-1 uppercase tracking-widest">Primary Option: Rail</p>
-                <p class="font-bold text-xs uppercase tracking-tight">Leonardo Express to Termini</p>
-                <p class="text-[9px] text-zinc-400 mt-1 uppercase">32 Mins | Runs every 15 mins. From Termini, it's a 10 min walk or 2 min taxi to Hotel Quirinale.</p>
-            </div>
-            <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
-                <p class="text-[9px] font-sync text-zinc-500 mb-1 uppercase tracking-widest">Secondary Option: Direct</p>
-                <p class="font-bold text-xs uppercase tracking-tight">Official Taxi / Uber Black</p>
-                <p class="text-[9px] text-zinc-400 mt-1 uppercase">Flat Rate: €50 | Door-to-door. Ensure you use the official white taxi stand outside Terminal 3.</p>
-            </div>
-        </div>
-    </div>
-	<Br>
-<div class="md:col-span-12 glass-panel p-8 rounded-[2.5rem] border-white/10 relative overflow-hidden">
-    <div class="mb-10 text-center md:text-left">
-        <h3 class="text-[10px] font-sync text-amber-500 mb-2 uppercase tracking-[0.3em]">Field Intelligence: 40 Objectives</h3>
-        <p class="text-4xl font-black uppercase tracking-tighter">THE ROMAN EXPANSION</p>
-        <p class="text-zinc-500 text-[10px] font-sync mt-1 uppercase tracking-widest">Complete Sector Intelligence for the Legion</p>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        
-        <div class="space-y-4">
-            <h4 class="text-red-500 font-sync text-[10px] uppercase tracking-wider border-b border-red-500/20 pb-2">Zone 01: Ancient Conquests</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-[11px] font-sync uppercase text-zinc-300">
-                <div class="flex gap-2"><span class="text-white">01</span> Colosseum Arena</div>
-                <div class="flex gap-2"><span class="text-white">02</span> Roman Forum</div>
-                <div class="flex gap-2"><span class="text-white">03</span> The Pantheon</div>
-                <div class="flex gap-2"><span class="text-white">04</span> Palatine Hill</div>
-                <div class="flex gap-2"><span class="text-white">05</span> Castel Sant'Angelo</div>
-                <div class="flex gap-2"><span class="text-white">06</span> Baths of Caracalla</div>
-                <div class="flex gap-2"><span class="text-white">07</span> Appian Way Hike</div>
-                <div class="flex gap-2"><span class="text-white">08</span> Circus Maximus</div>
-                <div class="flex gap-2"><span class="text-white">09</span> Largo di Torre Argentina</div>
-                <div class="flex gap-2"><span class="text-white">10</span> Arch of Constantine</div>
-            </div>
-        </div>
-
-        <div class="space-y-4">
-            <h4 class="text-amber-500 font-sync text-[10px] uppercase tracking-wider border-b border-amber-500/20 pb-2">Zone 02: Vatican / Culture</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-[11px] font-sync uppercase text-zinc-300">
-                <div class="flex gap-2"><span class="text-white">11</span> Sistine Chapel</div>
-                <div class="flex gap-2"><span class="text-white">12</span> St. Peter’s Dome</div>
-                <div class="flex gap-2"><span class="text-white">13</span> Vatican Museums</div>
-                <div class="flex gap-2"><span class="text-white">14</span> Galleria Borghese</div>
-                <div class="flex gap-2"><span class="text-white">15</span> Capitoline Hill</div>
-                <div class="flex gap-2"><span class="text-white">16</span> Villa Medici</div>
-                <div class="flex gap-2"><span class="text-white">17</span> Doria Pamphilj Gallery</div>
-                <div class="flex gap-2"><span class="text-white">18</span> Mouth of Truth</div>
-                <div class="flex gap-2"><span class="text-white">19</span> Ara Pacis Museum</div>
-                <div class="flex gap-2"><span class="text-white">20</span> San Luigi dei Francesi</div>
-            </div>
-        </div>
-
-        <div class="space-y-4">
-            <h4 class="text-emerald-500 font-sync text-[10px] uppercase tracking-wider border-b border-emerald-500/20 pb-2">Zone 03: Strategic Rations</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-[11px] font-sync uppercase text-zinc-300">
-                <div class="flex gap-2"><span class="text-white">21</span> Testaccio Market</div>
-                <div class="flex gap-2"><span class="text-white">22</span> Trastevere Food Tour</div>
-                <div class="flex gap-2"><span class="text-white">23</span> Trevi Fountain (Night)</div>
-                <div class="flex gap-2"><span class="text-white">24</span> Spanish Steps</div>
-                <div class="flex gap-2"><span class="text-white">25</span> Piazza Navona Spritz</div>
-                <div class="flex gap-2"><span class="text-white">26</span> Campo de' Fiori</div>
-                <div class="flex gap-2"><span class="text-white">27</span> Jewish Ghetto Food</div>
-                <div class="flex gap-2"><span class="text-white">28</span> Gianicolo Hill Sunset</div>
-                <div class="flex gap-2"><span class="text-white">29</span> Aventine Keyhole</div>
-                <div class="flex gap-2"><span class="text-white">30</span> Villa Borghese Bikes</div>
-            </div>
-        </div>
-
-        <div class="space-y-4">
-            <h4 class="text-blue-500 font-sync text-[10px] uppercase tracking-wider border-b border-blue-500/20 pb-2">Zone 04: Night Operations</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-[11px] font-sync uppercase text-zinc-300">
-                <div class="flex gap-2"><span class="text-white">31</span> Drink Kong (Sci-Fi)</div>
-                <div class="flex gap-2"><span class="text-white">32</span> Freni e Frizioni</div>
-                <div class="flex gap-2"><span class="text-white">33</span> The Court Bar</div>
-                <div class="flex gap-2"><span class="text-white">34</span> Shari Vari Club</div>
-                <div class="flex gap-2"><span class="text-white">35</span> Pigneto Bar Crawl</div>
-                <div class="flex gap-2"><span class="text-white">36</span> Jerry Thomas Speakeasy</div>
-                <div class="flex gap-2"><span class="text-white">37</span> Ma Che Siete Venuti A Fà</div>
-                <div class="flex gap-2"><span class="text-white">38</span> Black Market Hall</div>
-                <div class="flex gap-2"><span class="text-white">39</span> Ice Club Rome</div>
-                <div class="flex gap-2"><span class="text-white">40</span> Gregory’s Jazz Club</div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="absolute -bottom-10 -right-10 opacity-[0.03] pointer-events-none">
-        <svg class="w-64 h-64 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-        </svg>
-    </div>
-</div>
-    
-
-
 
         <footer class="mt-20 text-center pb-10">
             <p class="font-sync text-[9px] uppercase tracking-[0.4em] text-white/40">
-                What we do in Rome echoes in eternity<br>
-                <span class="text-[7px] tracking-[0.8em]">or at least until the wedding</span>
+                What we do in Hamburg echoes in eternity<br>
+                <span class="text-[7px] tracking-[0.8em]">Yearly Irish Squad Expeditions</span>
             </p>
         </footer>
 
     </main>
 
     <script>
-        const targetDate = new Date("Jan 23, 2026 06:40:00").getTime();
+        const targetDate = new Date("Mar 05, 2027 07:15:00").getTime();
         function updateTimer() {
             const now = new Date().getTime();
             const distance = targetDate - now;
@@ -614,6 +648,7 @@
             const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const s = Math.floor((distance % (1000 * 60)) / 1000);
+            
             document.getElementById("days").innerText = d < 10 ? '0'+d : d;
             document.getElementById("hours").innerText = h < 10 ? '0'+h : h;
             document.getElementById("mins").innerText = m < 10 ? '0'+m : m;
@@ -624,8 +659,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
